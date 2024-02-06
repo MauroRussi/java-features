@@ -1,7 +1,7 @@
 # Java Features
 Project to do some Java practices of new features per Java version.
 
-## Java 8 Features
+## Java 8
   <details>
     <summary style="font-size:1.2em;">Functional interfaces</summary>
     <p>
@@ -44,7 +44,6 @@ Project to do some Java practices of new features per Java version.
   <details>
     <summary style="font-size:1.2em;">Lambda Expressions</summary>
     <p>
-    Lambda Expressions:
     Lambda expressions provide the implementation of the abstract method of a functional interface.</br>
     An anonymous function may be defined as a Lambda Expression (or function) (a function with no name and an identifier).
     Lambda Expressions are defined precisely where they are required, often as a parameter to another function.</br>
@@ -61,11 +60,101 @@ Project to do some Java practices of new features per Java version.
     <a href="src/main/java/co/com/mrsoft/test/java8/Example3.java">Example</a>
   </details>  
 
-## Links for reference:
+  <details>
+    <summary style="font-size:1.2em;">Method References</summary>
+    <p>
+    The double colon (::) operator is called method reference.
+    There are four kind of method references:
+    1. Reference to a static method ClassName::staticMethodName
+    2. Reference to an instance method of a particular object Object::instanceMethodName
+    3. Reference to an instance method of an arbitrary object of a particular type ContainingType::methodName–
+    4. Reference to a constructor ClassName::new
+    </p>
+    <a href="src/main/java/co/com/mrsoft/test/java8/Example4.java">Example</a>
+  </details>  
+
+  <details>
+    <summary style="font-size:1.2em;">Lambda Expressions and Functional Interfaces: Tips and Best Practices</summary>
+    <p>
+    1. Prefer Standard Functional Interfaces before creating new functional interfaces.
+    2. Use the @FunctionalInterface annotation.
+    3. Don’t Overuse Default Methods in Functional Interfaces.
+    4. Instantiate Functional Interfaces with Lambda Expresssions.
+    5. Avoid overloading methods with Functional Interfaces as parameters.
+    6. Don't treat Lambda Expressions as Inner Classes.
+    7. Keep Lambda Expresssions short and self-explanatory.
+        7.1. Avoid blocks of code in Lambda's body.
+        7.2. Avoid specifying parameter types.
+        7.3. Avoid parentheses around a single parameter.
+        7.4. Avoid return statements and braces.
+        7.5. Use Method References.
+    8. Use "Effectively Final" variables.
+    9. Protect Object variables from Mutation - Avoid code that can cause unexpected mutations.
+  </details>
+
+  <details>
+    <summary style="font-size:1.2em;">Streams</summary>
+    <p>
+    A new <i>java.util.stream</i> has been added in Java 8 to perform filter/map/reduce like operations with the collection. 
+    Stream API will allow sequential as well as parallel execution.
+    Stream represents a sequence of objects from a source, which supports aggregate operations. Following are the 
+    characteristics of a Stream:
+    * Sequence of elements: A stream provides a set of elements of specific type in a sequential manner. 
+      A stream gets/computes elements on demand. It never stores the elements.
+    * Source: Stream takes Collections, Arrays, or I/O resources as input source.
+    * Aggregate operations: Stream supports aggregate operations like filter, map, limit, reduce, find, match, and so on.
+    * Pipelining: Most of the stream operations return stream itself so that their result can be pipelined. These operations 
+                  are called intermediate operations and their function is to take input, process them, and return output to 
+                  the target. 
+    * Collectors: collect() method is a terminal operation which is normally present at the end of the pipelining operation 
+                  to mark the end of the stream.
+    * Automatic iterations: Stream operations do the iterations internally over the source elements provided, in contrast to 
+                            Collections where explicit iteration is required.
+    </p>
+    <a href="src/main/java/co/com/mrsoft/test/java8/Example5.java">Example</a>
+  </details>  
+
+  <details>
+    <summary style="font-size:1.2em;">New Date Time APIs</summary>
+    <p>
+    </p>
+    <a href="src/main/java/co/com/mrsoft/test/java8/Example4.java">Example</a>
+  </details>  
+
+  <details>
+    <summary style="font-size:1.2em;">Optional Class</summary>
+    <p>
+    </p>
+    <a href="src/main/java/co/com/mrsoft/test/java8/Example4.java">Example</a>
+  </details>
+
+  <details>
+    <summary style="font-size:1.2em;">Nashorn Javascript</summary>
+    <p>
+    </p>
+    <a href="src/main/java/co/com/mrsoft/test/java8/Example4.java">Example</a>
+  </details>  
+
+  <details>
+    <summary style="font-size:1.2em;">Base64</summary>
+    <p>
+    </p>
+    <a href="src/main/java/co/com/mrsoft/test/java8/Example4.java">Example</a>
+  </details>  
+
+  <details>
+    <summary style="font-size:1.2em;">Collection | Concurrency | Java IO | Miscellaneous improvements</summary>
+    <p>
+    </p>
+    <a href="src/main/java/co/com/mrsoft/test/java8/Example4.java">Example</a>
+  </details>  
+
+
+## Java 8 - Links for reference:
  * https://mkyong.com/tutorials/java-8-tutorials/
  * https://www.digitalocean.com/community/tutorials/java-8-features-with-examples
- * https://www.digitalocean.com/community/tutorials/java-11-features
- * https://mkyong.com/java/what-is-new-in-java-17/
  * https://www.baeldung.com/java-8-functional-interfaces
  * https://www.interviewbit.com/blog/java-8-features/
  * https://www.tutorialspoint.com/java8/java8_lambda_expressions.htm
+ * https://www.digitalocean.com/community/tutorials/java-11-features
+ * https://mkyong.com/java/what-is-new-in-java-17/
