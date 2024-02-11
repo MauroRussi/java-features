@@ -11,7 +11,7 @@
 Project to do some Java practices of new features per Java version.
 
 ## Java 8
-  <details open="">
+  <details>
    <summary>Functional interfaces</summary>
 
    > It is an interface that has a SAM (Single Abstract Method).
@@ -26,7 +26,7 @@ Project to do some Java practices of new features per Java version.
 
   </details>
 
-  <details open="">
+  <details>
    <summary>Default And Static Methods In Interfaces</summary>
 
    > **Default Methods in Interfaces:**
@@ -44,7 +44,7 @@ Project to do some Java practices of new features per Java version.
 
   </details>
 
-  <details open="">
+  <details>
    <summary>Standard Functional Interfaces</summary>
     
    > The recommendation is using these default functions located in `java.util.function` package.
@@ -58,7 +58,7 @@ Project to do some Java practices of new features per Java version.
 
   </details>  
 
-  <details open="">
+  <details>
    <summary>Lambda Expressions</summary>
 
    > Lambda expressions provide the implementation of the abstract method of a functional interface.
@@ -88,7 +88,7 @@ Project to do some Java practices of new features per Java version.
    > [Example](src/main/java/co/com/mrsoft/test/java8/Example3.java)
   </details>  
 
-  <details open="">
+  <details>
    <summary>Method References</summary>
    
    > The double colon (::) operator is called method reference.
@@ -101,7 +101,7 @@ Project to do some Java practices of new features per Java version.
    > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
   </details>  
 
-  <details open="">
+  <details>
    <summary>Lambda Expressions and Functional Interfaces: Tips and Best Practices</summary>
 
    > 1. Prefer Standard Functional Interfaces before creating new functional interfaces.
@@ -125,16 +125,18 @@ Project to do some Java practices of new features per Java version.
    > 9. Protect Object variables from Mutation - Avoid code that can cause unexpected mutations.
   </details>
 
-  <details open="">
+  <details>
    <summary>For Each</summary>
     
+   > Java 8 has introduced a default method named `forEach` in `java.lang.Iterable` interface that can iterate over the collection's items.
    >
+   > The `forEach` method takes `java.util.function.Consumer` object as an argument
    >
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example6.java)
   </details>
 
 
-  <details open="">
+  <details>
    <summary>Streams</summary>
 
    > A new `java.util.stream` has been added in Java 8 to perform filter/map/reduce like operations with the collection. 
@@ -160,15 +162,31 @@ Project to do some Java practices of new features per Java version.
    > [Example](src/main/java/co/com/mrsoft/test/java8/Example5.java)
   </details>
 
-  <details open="">
+  <details>
    <summary>New Date Time APIs</summary>
     
+   > In the old days, we use `Date` and `Calendar` APIs to represent and manipulate date.
    >
+   > - `java.util.Date` – Date and time, print with default time-zone.
+   > - `java.util.Calendar` – Date and time, more methods to manipulate date.
+   > - `java.text.SimpleDateFormat` – Formatting (date -> text), parsing (text -> date) for date and calendar.
    >
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
+   > Java 8 created a series of new date and time APIs in `java.time` package.
+   > - `java.time.LocalDate` – Date without time, no time-zone. Default format is yyyy-MM-dd.
+   > - `java.time.LocalTime` – Time without date, no time-zone. Default format is HH:mm:ss.zzz.
+   > - `java.time.LocalDateTime` – Date and time, no time-zone. Default format is yyyy-MM-ddTHH:mm:ss.zzz.
+   > - `java.time.ZonedDateTime` – date and time, with time-zone.
+   > - `java.time.Instant` – date and time for machine, seconds passed since the Unix epoch time (midnight of January 1, 1970 UTC)
+   > - `java.time.Duration` – Measures time in seconds and nanoseconds.
+   > - `java.time.Period` – Measures time in years, months and days.
+   > - `java.time.temporal.TemporalAdjuster` – Adjust a date or Temporal.
+   > - `java.time.OffsetDateTime` – A date-time with an offset from UTC/Greenwich.
+   > - `java.time.DateTimeFormatter` – Formatting (date -> text), parsing (text -> date) for java.time.
+   >
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example7.java)
   </details>  
 
-  <details open="">
+  <details>
    <summary>Optional Class</summary>
     
    >
@@ -176,7 +194,7 @@ Project to do some Java practices of new features per Java version.
    > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
   </details>
 
-  <details open="">
+  <details>
    <summary>Nashorn Javascript</summary>
     
    >
@@ -184,7 +202,7 @@ Project to do some Java practices of new features per Java version.
    > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
   </details>  
 
-  <details open="">
+  <details>
    <summary>Base 64</summary>
     
    >
@@ -192,7 +210,7 @@ Project to do some Java practices of new features per Java version.
    > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
   </details>  
 
-  <details open="">
+  <details>
    <summary>Collection | Concurrency | Java IO | Miscellaneous improvements</summary>
     
    >
