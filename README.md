@@ -218,19 +218,49 @@ Project to do some Java practices of new features per Java version.
   </details>  
 
   <details>
-   <summary>Collection | Concurrency | Java IO | Miscellaneous improvements</summary>
+   <summary>Collection API improvements</summary>
 
-   >
-   >
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
+   > Some new methods added in Collection API are:
+   > - `Iterator` default method `forEachRemaining(Consumer action)` to perform the given action for each remaining element until all elements have been processed or the action throws an exception.
+   > - `Collection` default method `removeIf(Predicate filter)` to remove all of the elements of this collection that satisfy the given predicate.
+   > - `Collection` `spliterator()` method returning `Spliterator` instance that can be used to traverse elements sequentially or parallel.
+   > - Map `replaceAll()`, `compute()`, `merge()` methods.
+   > - Performance Improvement for `HashMap` class with Key Collisions
   </details>  
 
   <details>
-   <summary>Nashorn Javascript</summary>
-    
-   >
-   >
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
+   <summary>Concurrency API improvements</summary>
+
+   > Some important concurrent API enhancements are:
+   > - `ConcurrentHashMap` `compute()`, `forEach()`, `forEachEntry()`, `forEachKey()`, `forEachValue()`, `merge()`, `reduce()` and `search()` methods.
+   > - `CompletableFuture` that may be explicitly completed (setting its value and status).
+   > - `Executors` `newWorkStealingPool()` method to create a work-stealing thread pool using all available processors as its target parallelism level.
+  </details>  
+
+  <details>
+   <summary>Java IO improvements</summary>
+
+   > Some IO improvements are:
+   > - `Files.list(Path dir)` that returns a lazily populated `Stream`, the elements of which are the entries in the directory.
+   > - `Files.lines(Path path)` that reads all lines from a file as a `Stream`.
+   > - `Files.find()` that returns a `Stream` that is lazily populated with `Path` by searching for files in a file tree rooted at a given starting file.
+   > - `BufferedReader.lines()` that return a `Stream`, the elements of which are lines read from this `BufferedReader`.
+  </details>
+
+  <details>
+   <summary>Miscellaneous improvements</summary>
+
+   > Some miscellaneous API improvements are:
+   > - `ThreadLocal` static method `withInitial(Supplier supplier)` to create instances easily.
+   > - The `Comparator` interface has been extended with a lot of default and static methods for natural ordering, reverse order, etc.
+   > - `min()`, `max()` and `sum()` methods in `Integer`, `Long` and `Double` wrapper classes.
+   > `logicalAnd()`, `logicalOr()` and `logicalXor()` methods in `Boolean` class.
+   > `ZipFile.stream()` method to get an ordered `Stream` over the ZIP file entries. Entries appear in the `Stream` in the order they appear in the central directory of the ZIP file.
+   > - Several utility methods in Math class.
+   > - `jjs` command is added to invoke Nashorn Javascript Engine which was introduced to replace the existing Rhino.
+   > - `jdeps` command is added to analyze class files
+   > - JDBC-ODBC Bridge has been removed.
+   > - PermGen memory space has been removed
   </details>  
 
 ## Java 8 - Links for reference:
@@ -239,5 +269,9 @@ Project to do some Java practices of new features per Java version.
  * https://www.baeldung.com/java-8-functional-interfaces
  * https://www.interviewbit.com/blog/java-8-features/
  * https://www.tutorialspoint.com/java8/java8_lambda_expressions.htm
+
+## Java 11 - Links for reference:
  * https://www.digitalocean.com/community/tutorials/java-11-features
+
+## Java 17 - Links for reference:
  * https://mkyong.com/java/what-is-new-in-java-17/
