@@ -202,9 +202,19 @@ Project to do some Java practices of new features per Java version.
   <details>
    <summary>Base 64</summary>
 
+   > For Base64 encoding, Java 8 has built-in encode and decode functions.
+   > 
+   > The Base64 encoding class in `java.util.Base64`.
    >
+   > Three Base64 encoders and decoders are provided in this class:
+   > - Simple: The output is mapped to a set of characters between `A-Za-z0-9+/`. 
+   >   The encoder does not add a line feed to the output, and the decoder rejects any character other than the above.
+   > - URL: Output is mapped to set of characters between `A-Za-z0-9+_`. Output is URL and filename safe. 
+   > - MIME: The output of this sort of encoder is mapped to a MIME-friendly format. Output is represented in lines of no
+   >   more than 76 characters each, and uses a carriage return `\r` followed by a linefeed `\n` as the line separator.
+   >   No line separator is present to the end of the encoded output.
    >
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example9.java)
   </details>  
 
   <details>
