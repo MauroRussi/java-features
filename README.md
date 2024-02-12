@@ -8,7 +8,7 @@
 } -->
 
 # Java Features
-Project to do some Java practices of new features per Java version.
+Project to do some Java practices and summarize the new features per Java version since Java 8.
 
 ## Java 8
   <details>
@@ -261,17 +261,178 @@ Project to do some Java practices of new features per Java version.
    > - `jdeps` command is added to analyze class files
    > - JDBC-ODBC Bridge has been removed.
    > - PermGen memory space has been removed
-  </details>  
+  </details>
 
-## Java 8 - Links for reference:
+## Java 9
+  <details>
+   <summary>Module System</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>REPL (JShell)</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Improved Javadocs</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Multirelease JAR</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Collection Factory Methods</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Private Interface Methods</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Process API improvements</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Stream API improvements</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Try With Resources improvement</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Enhanced @Deprecated annotation</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Inner Class Diamond Operator</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Optional Class improvements</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Multiresolution Image API</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>CompletableFuture API improvements</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Lightweight JSON</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Reactive Streams API</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Miscellaneous features</summary>
+
+   > 
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+
+  </details>
+
+## Links for reference
+### Java 8
  * https://mkyong.com/tutorials/java-8-tutorials/
  * https://www.digitalocean.com/community/tutorials/java-8-features-with-examples
  * https://www.baeldung.com/java-8-functional-interfaces
  * https://www.interviewbit.com/blog/java-8-features/
  * https://www.tutorialspoint.com/java8/java8_lambda_expressions.htm
 
-## Java 11 - Links for reference:
- * https://www.digitalocean.com/community/tutorials/java-11-features
+### Java 9
+ * https://www.tutorialspoint.com/java9/index.htm
+ * https://www.digitalocean.com/community/tutorials/java-9-features-with-examples
+ * https://www.interviewbit.com/blog/java-9-features/
 
-## Java 17 - Links for reference:
+### Java 11
+ * https://www.digitalocean.com/community/tutorials/java-11-features
+ * https://mkyong.com/java/what-is-new-in-java-11/
+
+### Java 17
  * https://mkyong.com/java/what-is-new-in-java-17/
