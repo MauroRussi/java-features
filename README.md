@@ -189,22 +189,19 @@ Project to do some Java practices of new features per Java version.
   <details>
    <summary>Optional Class</summary>
     
+   > Optional is a container object used to contain not-null objects.
+   > 
+   > Optional object is used to represent null with absent value. 
+   > 
+   > This class has various utility methods to facilitate code to handle values as ‘available’ or 
+   > ‘not available’ instead of checking null values.
    >
-   >
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example8.java)
   </details>
 
   <details>
-   <summary>Nashorn Javascript</summary>
-    
-   >
-   >
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
-  </details>  
-
-  <details>
    <summary>Base 64</summary>
-    
+
    >
    >
    > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
@@ -212,6 +209,14 @@ Project to do some Java practices of new features per Java version.
 
   <details>
    <summary>Collection | Concurrency | Java IO | Miscellaneous improvements</summary>
+
+   >
+   >
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
+  </details>  
+
+  <details>
+   <summary>Nashorn Javascript</summary>
     
    >
    >
