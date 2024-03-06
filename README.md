@@ -267,9 +267,27 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Module System</summary>
 
+   > Module is an abstraction over package. This module system is also known as JPMS (Java Platform Module System).
+   > It is a new kind of programming component which can contains packages, configurations, resources specific to a particular functionality. 
+   > A module is able to restrict access to packages it contains. By default, code in a package within a module is not visible to outside world, not even via reflection. 
+   > Java platform is itself modularised from java 9 onwards. 
    > 
+   > If we use the `list-modules` command to list the java modules, it will print the various modules java supports.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > **Features of Java Module System**
+   > 
+   > - A new optional phase, link time is introduced. This phase is in-between compile time and run time. During this phase, a set of modules can be assembled and optimized, making a custom runtime image using jlink tool.
+   > - javac, jlink, and java have additional options to specify module paths, which further locate definitions of modules.
+   > - JAR format updated as modular JAR, which contains module-info.class file in its root directory.
+   > - JMOD format introduced, a packaging format (similar to JAR) which can include native code and configuration files.
+   > 
+   >  **Declaring a Module**
+   > 
+   > In order to declare a module, we need to create a `module-info.java` in root folder of the application. 
+   > 
+   > This file contains all the meta data or module descriptions.
+   > 
+   > [Example](src/main/java/module-info.java)
 
   </details>
 
