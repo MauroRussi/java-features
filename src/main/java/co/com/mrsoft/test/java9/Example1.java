@@ -4,7 +4,7 @@ package co.com.mrsoft.test.java9;
  * @author mrussi
  * @version 0.1
  */
-public class JavadocTest {
+public class Example1 {
     /**
      * Default method to be run to print
      * <p>Hello world</p>
