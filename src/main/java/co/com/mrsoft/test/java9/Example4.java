@@ -5,6 +5,9 @@ import java.time.ZoneId;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * Samples of Process API improvements.
+ */
 public class Example4 {
     public static void main(String[] args) throws IOException {
         //String command = "notepad.exe";

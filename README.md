@@ -375,16 +375,24 @@ Project to do some Java practices and summarize the new features per Java versio
    > 
    > It has `onExit` method, the `CompletableFuture` class can perform action asynchronously when process exits.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example4.java)
 
   </details>
 
   <details>
    <summary>Stream API improvements</summary>
 
-   > 
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > There are new methods to make streams better:
+   >  - `default Stream<T> takeWhile(Predicate<? super T> predicate)`
+   >    * `takeWhile` takes all the values until the predicate returns false.
+   >  - `default Stream<T> dropWhile(Predicate<? super T> predicate)`
+   >    * `dropWhile` method throw away all the values at the start until the predicate returns true.
+   >  - `static <T> Stream<T> iterate(T seed, Predicate<? super T> hasNext, UnaryOperator<T> next)`
+   >    * `iterate` method now has hasNext predicate as parameter which stops the loop once hasNext predicate returns false.
+   >  - `static <T> Stream<T> ofNullable(T t)`   
+   >    * `ofNullable` method is introduced to prevent `NullPointerExceptions` and to avoid null checks for streams. This method returns a sequential `Stream` containing single element, if non-null, otherwise returns an empty Stream.
+   >  
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example5.java)
 
   </details>
 
@@ -393,7 +401,7 @@ Project to do some Java practices and summarize the new features per Java versio
 
    > 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
 
   </details>
 
@@ -402,7 +410,7 @@ Project to do some Java practices and summarize the new features per Java versio
 
    > 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
 
   </details>
 
@@ -411,7 +419,7 @@ Project to do some Java practices and summarize the new features per Java versio
 
    > 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
 
   </details>
 
@@ -420,7 +428,7 @@ Project to do some Java practices and summarize the new features per Java versio
 
    > 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
 
   </details>
 
@@ -429,7 +437,7 @@ Project to do some Java practices and summarize the new features per Java versio
 
    > 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
 
   </details>
 
@@ -438,7 +446,7 @@ Project to do some Java practices and summarize the new features per Java versio
 
    > 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
 
   </details>
 
@@ -447,7 +455,7 @@ Project to do some Java practices and summarize the new features per Java versio
 
    > 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
 
   </details>
 
@@ -456,7 +464,7 @@ Project to do some Java practices and summarize the new features per Java versio
 
    > 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
 
   </details>
 
@@ -465,7 +473,7 @@ Project to do some Java practices and summarize the new features per Java versio
 
    > 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
 
   </details>
 
