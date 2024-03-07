@@ -314,8 +314,8 @@ Project to do some Java practices and summarize the new features per Java versio
    > Since Java 9, we can generate documentation in html 5 format using `-html5` option in command line argument.
    > 
    > To test it, create a temporary folder in the root of the project and go inside it, then execute the following commands: 
-   > - HTML 4: `javadoc -d . ../src/main/java/co/com/mrsoft/test/java9/JavadocTest.java`
-   > - HTML 5: `javadoc -d . -html5 ../src/main/java/co/com/mrsoft/test/java9/JavadocTest.java`
+   > - HTML 4: `javadoc -d . ../src/main/java/co/com/mrsoft/test/java9/Example1.java`
+   > - HTML 5: `javadoc -d . -html5 ../src/main/java/co/com/mrsoft/test/java9/Example1.java`
 
   </details>
 
@@ -335,9 +335,16 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Collection Factory Methods</summary>
 
+   > In Java 9, collections were enhanced to have few new methods to create
+   > immutable list in an easy and concise way. 
    > 
+   > These new factory methods were added to `List`, `Set`, and `Map` interfaces to 
+   > create immutable instances. 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > These factory methods are mainly convenience factory methods in order to create 
+   > a collection in less verbose and in concise way.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example2.java)
 
   </details>
 

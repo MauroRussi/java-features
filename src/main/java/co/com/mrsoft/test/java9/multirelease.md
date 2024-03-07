@@ -76,14 +76,14 @@ Multi-Release: true
 
 #### Step 8: Run the Jar with JDK 7
 ``` bash
-java -jar test.jar
+> java -jar test.jar
 
 Inside java 7
 ```
 
 #### Step 9: Run the Jar with JDK 9
 ``` bash
-java -jar test.jar
+> java -jar test.jar
 
 Inside java 9
 ```
