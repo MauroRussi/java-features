@@ -6,6 +6,14 @@ package co.com.mrsoft.test.java9;
  */
 public class Example1 {
     /**
+     * Sample deprecated method to show new enhancements.
+     */
+    @Deprecated(since = "1.1", forRemoval = true)
+    public void testMethod() {
+        System.out.println("Test deprecated");
+    }
+
+    /**
      * Default method to be run to print
      * <p>Hello world</p>
      * @param args command line arguments

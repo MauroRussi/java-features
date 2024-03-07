@@ -3,8 +3,6 @@ package co.com.mrsoft.test.java9;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 /**
  * Samples of try-with-resources improvements.

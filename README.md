@@ -413,7 +413,11 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Enhanced @Deprecated annotation</summary>
 
-   > 
+   > Two new enhancements are made to `@Deprecated` annotation:
+   >  - `forRemoval` attribute indicates whether the annotated element is subject to removal in a future version. 
+   > The default value is `false`.
+   >  - `since` attribute returns the version in which the annotated element became deprecated. 
+   > The default value is the empty string.
    > 
    > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
 
