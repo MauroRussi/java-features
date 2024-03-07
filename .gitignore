@@ -43,3 +43,6 @@ out/
 
 ### MacOS ###
 .DS_Store
+
+### Target MD files ###
+target/**/*.md

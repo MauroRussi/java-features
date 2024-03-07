@@ -294,27 +294,41 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>REPL (JShell)</summary>
 
+   > REPL stands for Read Evaluate Print Loop. JShell was introduced in Java 9 which is an interactive console. 
    > 
+   > JShell as REPL allows to run arbitrary snippet of java code in console without need to save and compile java code file. 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > JShell reads each line entered, evaluates it and then print the result and then again becomes ready for next set of input.
+   > 
+   > In order to run it, open a command prompt and type `jshell`
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java9/jshell.md)
 
   </details>
 
   <details>
    <summary>Improved Javadocs</summary>
 
+   > Trraditional `javadoc` command generates documentation in html 4.0 format.
    > 
+   > Since Java 9, we can generate documentation in html 5 format using `-html5` option in command line argument.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > To test it, create a temporary folder in the root of the project and go inside it, then execute the following commands: 
+   > - HTML 4: `javadoc -d . ../src/main/java/co/com/mrsoft/test/java9/JavadocTest.java`
+   > - HTML 5: `javadoc -d . -html5 ../src/main/java/co/com/mrsoft/test/java9/JavadocTest.java`
 
   </details>
 
   <details>
-   <summary>Multirelease JAR</summary>
+   <summary>Multirelease Jar</summary>
 
+   > It allows to use of multiple versions of a class pertaining to multiple versions of Java. It helps to counter 
+   > the problem of maintenance of multiple source codes of the same file or platform-specific version of a file.
    > 
+   > In multi-release Jar, the `MANIFEST.MF` file has an entry `Multi-Release: true` in its main section.
+   > `META-INF` directory also contains a versions subdirectory whose subdirectories store version-specific classes and resource files.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/multirelease.md)
 
   </details>
 
@@ -447,7 +461,8 @@ Project to do some Java practices and summarize the new features per Java versio
  * https://www.tutorialspoint.com/java9/index.htm
  * https://www.digitalocean.com/community/tutorials/java-9-features-with-examples
  * https://www.interviewbit.com/blog/java-9-features/
-
+ * https://www.baeldung.com/new-java-9
+ 
 ### Java 11
  * https://www.digitalocean.com/community/tutorials/java-11-features
  * https://mkyong.com/java/what-is-new-in-java-11/
