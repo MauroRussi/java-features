@@ -351,9 +351,9 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Private Interface Methods</summary>
 
+   > Interfaces can have private static methods, which can be used to split lengthy default methods.
    > 
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example3.java)
 
   </details>
 
