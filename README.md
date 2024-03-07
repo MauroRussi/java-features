@@ -399,9 +399,14 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Try With Resources improvement</summary>
 
+   > The `try-with-resources` statement ensures that each resource is closed after the requirement finishes. 
+   > Any object implementing `java.lang.AutoCloseable` or `java.io.Closeable`, interface can be used as a resource.
    > 
+   > Prior to Java 9, the `try-with-resources` syntax requires a fresh variable to be declared for each resource 
+   > being managed by the statement. Java 9 is going to provide some improvements to this statement to avoid 
+   > some more verbosity and improve some Readability.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example6.java)
 
   </details>
 
