@@ -351,7 +351,7 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Private Interface Methods</summary>
 
-   > Interfaces can have private static methods, which can be used to split lengthy default methods.
+   > Interfaces can have `private static` methods, which can be used to split lengthy `default` methods.
    > 
    > [Example](src/main/java/co/com/mrsoft/test/java9/Example3.java)
 
@@ -360,9 +360,22 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Process API improvements</summary>
 
+   > Process API which is responsible to control and manage operating system processes has been improved considerably. 
    > 
+   > `ProcessHandle` Class now provides:
+   > - Process's native process ID
+   > - Start time
+   > - Accumulated CPU time
+   > - Arguments
+   > - Command
+   > - User
+   > - Parent process and descendants 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java8/Example1.java)
+   > `ProcessHandle` class also provides method to check processes' liveness and to destroy processes. 
+   > 
+   > It has `onExit` method, the `CompletableFuture` class can perform action asynchronously when process exits.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java8/Example4.java)
 
   </details>
 
