@@ -462,9 +462,13 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Multiresolution Image API</summary>
 
+   > The interface `java.awt.image.MultiResolutionImage` encapsulates a set of images with different resolutions into a single object. 
    > 
+   > We can retrieve a resolution-specific image variant based on a given DPI metric and set of image transformations or retrieve all of the variants in the image.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
+   > The `java.awt.Graphics` class gets variant from a multi-resolution image based on the current display DPI metric and any applied transformations.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example9.java)
 
   </details>
 

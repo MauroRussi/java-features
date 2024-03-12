@@ -5,6 +5,7 @@ module co.com.mrsoft.test.java9.module {
      * All public types exported from a dependency are accessible by our module.
      */
     requires java.sql;
+    requires java.desktop;
 
     /*
      * Optional modules - We can declare optional dependencies that users of our library will never want to use.
