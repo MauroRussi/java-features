@@ -13,6 +13,9 @@ abstract class Handler<T> {
     public abstract void handle();
 }
 
+/**
+ * Sample of new diamond optional operator in inner classes.
+ */
 public class Example7 {
     public static void main(String[] args) {
 

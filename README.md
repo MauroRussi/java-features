@@ -450,9 +450,12 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Optional Class improvements</summary>
 
+   > Java 9 has added a stream method. 
    > 
+   > If a value is present in the given Optional object, this stream() method returns a sequential Stream with that value. 
+   > Otherwise, it returns an empty Stream. 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example8.java)
 
   </details>
 
