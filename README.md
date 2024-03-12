@@ -426,9 +426,24 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Inner Class Diamond Operator</summary>
 
+   > The diamond operator was introduced in Java 7 to make code more readable for `Generics`. A generic is a type of argument. 
+   > Using generic we can pass any kind of object to be processed by the class methods. 
    > 
+   > For example, if we are creating a list of strings before Java 7, then we've to use the following syntax to instantiate a list of strings with an `ArrayList` object.
+   > ``` java
+   > List<String> listOfStrings = new ArrayList<String>();
+   > ``` 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
+   > From Java 7 onwards, we can use diamond operator to simplify the above syntax as following
+   > ``` java
+   > List<String> listOfStrings = new ArrayList<>();
+   > ``` 
+   > 
+   > But it could not be used with Anonymous inner classes.
+   > 
+   > In Java 9, the diamond operator can be used with an anonymous class as well to simplify code and improve readability.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example7.java)
 
   </details>
 
