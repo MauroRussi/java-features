@@ -473,11 +473,63 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
   <details>
+   <summary>New Http Client</summary>
+
+   > A new HTTPClient API supporting websockets and HTTP 2 streams and server push features located under the java.net.http package.
+   > A long-awaited replacement of the old HttpURLConnection.
+   > 
+   > The new HTTP client API implements the following:
+   >  - An easy and compact API to deal with most HTTP requests
+   >  - Support for HTTP/2 specification
+   >  - Better performance
+   >  - Better security
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example9.java)
+
+  </details>
+
+
+  <details>
    <summary>CompletableFuture API improvements</summary>
 
+   > There is an improvement in the `CompletableFuture` API that solve some problems raised in Java SE 8. 
    > 
+   > Following are the relevant changes done to the API:
+   >  - Support for delays and timeouts
+   >    ``` java
+   >    // This method completes this CompletableFuture with the given value if not otherwise completed before the given timeout.
+   >    public CompletableFuture<T> completeOnTimeout(T value, long timeout, TimeUnit unit)
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
+   >    // This method exceptionally completes this CompletableFuture with a TimeoutException if not otherwise 
+   >    // completed before the given timeout.   
+   >    public CompletableFuture<T> orTimeout(long timeout, TimeUnit unit)
+   >    ``` 
+   >  - Improved support for subclassing
+   >    ``` java
+   >    // It returns the default Executor used for async methods that do not specify an Executor. 
+   >    // This method may be overridden in subclasses to return an Executor to provide one independent thread as minimum.
+   >    public Executor defaultExecutor()
+   > 
+   >    // Returns a new incomplete CompletableFuture of the type to be returned by a CompletionStage method. 
+   >    // Subclasses of CompletableFuture class should override this method to return an instance of the same class 
+   >    // as this CompletableFuture. 
+   >    // The default implementation returns an instance of class CompletableFuture.
+   >    public <U> CompletableFuture<U> newIncompleteFuture()
+   >    ``` 
+   >  - New factory methods added
+   >    ``` java   
+   >    // This factory method returns a new CompletableFuture which is already completed with the given value.
+   >    public static <U> CompletableFuture<U> completedFuture(U value)
+   > 
+   >    // This factory method returns a new CompletionStage which is already completed with the given value 
+   >    // and supports only those methods present in interface CompletionStage.
+   >    public static <U> CompletionStage<U> completedStage(U value)
+   >
+   >    // This factory method returns a new CompletionStage which is already completed exceptionally with the 
+   >    // given exception and supports only those methods present in interface CompletionStage.
+   >    public static <U> CompletionStage<U> failedStage(Throwable ex)
+   >    ```
+   > 
 
   </details>
 

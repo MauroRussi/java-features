@@ -6,6 +6,7 @@ module co.com.mrsoft.test.java9.module {
      */
     requires java.sql;
     requires java.desktop;
+    requires java.net.http;
 
     /*
      * Optional modules - We can declare optional dependencies that users of our library will never want to use.
