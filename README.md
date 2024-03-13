@@ -608,6 +608,141 @@ Project to do some Java practices and summarize the new features per Java versio
 
   </details>
 
+## Java 10
+  <details>
+   <summary>Time-Based Release Versioning (JEP-322)</summary>
+
+   > From Java 10 onwards, Oracle has introduced a strict time based release versioning model for Java releases. 
+   > Now Java will have a major release after every six months.
+   > 
+   > Releases are further categoried into three broad categories:
+   >  - **Feature Release:** It contains language specific features, JVM features, New/Improved APIs, Removal/Deprecation of APIs. 
+   > Time of these feature releases is fixed and there is no constraint on features to be included in a particular release.
+   >  - **Update Release:** It includes bug fixes, security issue fix, regression fixes etc. Each Feature release will receive 
+   > two Update releases before next feature release is announced.
+   >  - **Long Term Support(LTS) Release:** Long term support release will be announced after every three years starting from Sep, 2018. 
+   > This release is primarily for Corporates using Java in production deployments.
+   > 
+   > A version now follows the following format: `$FEATURE.$INTERIM.$UPDATE.$PATCH`
+   >  - **$FEATURE:** This number denotes the major feature release and will get incremented by 1 after every Feature Release.
+   >  - **$INTERIM:** This number denotes any non-feature, non-update release which contains bug fixes and enhancements. 
+   > This release is not having any incompatible changes, any API removal or change to standard API. 
+   > A Feature release, will have this counter as 0.
+   >  - **$UPDATE:** This number denotes the Update release done after a Feature Release.
+   >  - **$PATCH:** This number denotes any emergency release incremented only in case an critical issue is to be promoted on emergent basis.
+   >
+  </details>
+
+  <details>
+   <summary>Local Variable Type Inference (JEP-286)</summary>
+
+   > 
+   > 
+   > 
+   > [Example](src/main/java10/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Garbage-Collector Interface (JEP-304)</summary>
+
+   > 
+   > 
+   > 
+   > [Example](src/main/java10/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Parallel Full GC for G1 (JEP-307)</summary>
+
+   > 
+   > 
+   > 
+   > [Example](src/main/java10/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Heap Allocation on Alternative Memory Devices (JEP-316)</summary>
+
+   > 
+   > 
+   > 
+   > [Example](src/main/java10/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Consolidate the JDK Forest into a Single Repository (JEP-296)</summary>
+
+   > 
+   > 
+   > 
+   > [Example](src/main/java10/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Application Class-Data Sharing (JEP-310)</summary>
+
+   > 
+   > 
+   > 
+   > [Example](src/main/java10/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Additional Unicode Language-Tag Extensions (JEP-314)</summary>
+
+   > 
+   > 
+   > 
+   > [Example](src/main/java10/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Root Certificates (JEP-319)</summary>
+
+   > 
+   > 
+   > 
+   > [Example](src/main/java10/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Experimental Java-Based JIT Compiler (JEP-317)</summary>
+
+   > 
+   > 
+   > 
+   > [Example](src/main/java10/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Thread-Local Handshakes (JEP-312)</summary>
+
+   > 
+   > 
+   > 
+   > [Example](src/main/java10/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Remove the Native-Header Generation Tool (JEP-313)</summary>
+
+   > 
+   > 
+   > 
+   > [Example](src/main/java10/Example1.java)
+
+  </details>  
+
 ## Links for reference
 ### Java 8
  * https://mkyong.com/tutorials/java-8-tutorials/
@@ -623,6 +758,12 @@ Project to do some Java practices and summarize the new features per Java versio
  * https://www.baeldung.com/new-java-9
  * https://www.baeldung.com/java-9-reactive-streams
  * https://www.geeksforgeeks.org/java-9-features-with-examples/
+
+### Java 10
+ * https://www.tutorialspoint.com/java10/index.htm
+ * https://www.baeldung.com/java-10-overview
+ * https://www.digitalocean.com/community/tutorials/java-10-features
+ * https://www.happycoders.eu/java/java-10-features/
   
 ### Java 11
  * https://www.digitalocean.com/community/tutorials/java-11-features
