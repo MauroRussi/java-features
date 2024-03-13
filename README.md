@@ -534,20 +534,34 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
   <details>
-   <summary>Lightweight JSON</summary>
-
-   > 
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
-
-  </details>
-
-  <details>
    <summary>Reactive Streams API</summary>
 
+   > Reactive Streams is a standard for asynchronous stream processing with non-blocking back pressure. 
    > 
+   > This specification is defined in the [Reactive Manifesto](http://www.reactive-streams.org), and there are various implementations of it, 
+   > for example, RxJava or Akka-Streams.
+
+   > To build a `Flow`, we can use three main abstractions and compose them into asynchronous processing logic.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
+   > Every `Flow` needs to process events that are published to it by a `Publisher` instance; the `Publisher` has one method – `subscribe()`.
+   >
+   > If any of the subscribers want to receive events published by it, they need to subscribe to the given `Publisher`. 
+   >
+   > `java.util.concurrent.SubmissionPublisher` is an implementation of the `Publisher` interface.
+
+   > The receiver of messages needs to implement the `Subscriber` interface. Typically this is the end for every `Flow` processing because 
+   > the instance of it does not send messages further.
+   >
+   > This has four methods that need to be overridden – `onSubscribe()`, `onNext()`, `onError()`, and `onComplete()`.
+
+   > If we want to transform incoming message and pass it further to the next `Subscriber`, we need to implement the `Processor` interface. 
+   >
+   > This acts both as a `Subscriber` because it receives messages, and as the `Publisher` because it processes those messages and sends 
+   > them for further processing.
+
+   > In summary this is a chain of `Publisher` to `Processor` to one or many `Subscriber`.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java9/reactive/Test.java)
 
   </details>
 
@@ -573,7 +587,9 @@ Project to do some Java practices and summarize the new features per Java versio
  * https://www.digitalocean.com/community/tutorials/java-9-features-with-examples
  * https://www.interviewbit.com/blog/java-9-features/
  * https://www.baeldung.com/new-java-9
- 
+ * https://www.baeldung.com/java-9-reactive-streams
+ * https://www.geeksforgeeks.org/java-9-features-with-examples/
+  
 ### Java 11
  * https://www.digitalocean.com/community/tutorials/java-11-features
  * https://mkyong.com/java/what-is-new-in-java-11/
