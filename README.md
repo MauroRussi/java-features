@@ -636,8 +636,14 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Local Variable Type Inference (JEP-286)</summary>
 
+   > It allows to define a variable using var and without specifying the type of it. 
+   > The compiler infers the type of the variable using the value provided. 
    > 
-   > 
+   > Noteworthy points:
+   >  - This type inference is restricted only to local variables.
+   >  - Local variable should be initialized at time of declaration otherwise compiler will not be infer and will throw error.
+   >  - No type inference in case of member variable, method parameters, return values.
+   >  - No dynamic type change. Once type of local variable is inferred it cannot be changed.
    > 
    > [Example](src/main/java10/Example1.java)
 
