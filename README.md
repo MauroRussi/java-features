@@ -566,11 +566,45 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
   <details>
+   <summary>Unified JVM Logging</summary>
+
+   > This feature introduces a common logging system for all components of the JVM. 
+   >
+   > It provides the infrastructure to do the logging, but it does not add the actual logging calls from all JVM components. 
+   >
+   > It also does not add logging to Java code in the JDK.
+   >
+   > The logging framework defines a set of tags – for example, gc, compiler, threads, etc. 
+   >
+   > We can use the command line parameter -Xlog to turn on logging during startup.
+   >
+   > Let’s log messages tagged with ‘gc’ tag using ‘debug’ level to a file called ‘gc.txt’ with no decorations:
+   >   ```bash
+   >   java -Xlog:gc=debug:file=gc.txt:none ...
+   >   ```
+   > 
+   > -Xlog:help will output possible options and examples.
+   >
+   > Logging configuration can be modified runtime using `jcmd` command. We are going to set GC logs to info and redirect them to a file – gc_logs:
+   >   ```bash
+   >   jcmd 9615 VM.log output=gc_logs what=gc
+   >   ```
+   >
+  </details>
+
+  <details>
    <summary>Miscellaneous features</summary>
 
-   > 
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java9/Example1.java)
+   > Some miscellaneous API improvements are:
+   > - GC (Garbage Collector) Improvements
+   > - Stack-Walking API
+   > - Filter Incoming Serialization Data
+   > - Deprecate the Applet API
+   > - Indify String Concatenation
+   > - Enhanced Method Handles
+   > - Java Platform Logging API and Service
+   > - Compact Strings
+   > - Parser API for Nashorn
 
   </details>
 
