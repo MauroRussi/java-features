@@ -645,7 +645,7 @@ Project to do some Java practices and summarize the new features per Java versio
    >  - No type inference in case of member variable, method parameters, return values.
    >  - No dynamic type change. Once type of local variable is inferred it cannot be changed.
    > 
-   > [Example](src/main/java10/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java10/Example1.java)
 
   </details>
 
