@@ -652,100 +652,168 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Garbage-Collector Interface (JEP-304)</summary>
 
+   > Before Java 10, GC (Garbage Collector) implementation components were scattered within code base and were not replaceable easily. 
    > 
-   > 
-   > 
-   > [Example](src/main/java10/Example1.java)
+   > With Java 10, `Garbage-Collector` interface is introduced so that alternative GC implementations can be plugged in. 
+   >
+   > It also helps in isolating the code base from different garbage collection implementations.
 
   </details>
 
   <details>
    <summary>Parallel Full GC for G1 (JEP-307)</summary>
 
-   > 
-   > 
-   > 
-   > [Example](src/main/java10/Example1.java)
+   > Java 9 introduced G1 (Garbage First) garbage collector. G1 avoids full garbage collection but in case of concurrent threads look for 
+   > collection and memory is not revived fast enough, user experience is impacted. 
+   >
+   > With Java 10, now G1 will use a fall back Full Garbage Collection. With this change, G1 improves its worst-case latency by using a Full GC in parallel. 
+   >
+   > At present, G1 uses a single threaded mark-sweep-compact algorithm. With JEP 307, a parallel thread will start mark-sweep-compact algorithm.
+   >
+   > Number of threads can be controlled using following option.
+   > ```bash
+   > >java -XX:ParallelGCThreads=4
+   > ```
 
   </details>
 
   <details>
    <summary>Heap Allocation on Alternative Memory Devices (JEP-316)</summary>
 
-   > 
-   > 
-   > 
-   > [Example](src/main/java10/Example1.java)
+   > With this enhancement in Java 10, now user can specify an alternative memory device, like NV-DIMM to HotSpot VM to allocation the java heap space. 
+   >
+   > User need to pass a path to the file system using a new option `-XX:AllocateHeapAt`.
+   > ```bash
+   > >-XX:AllocateHeapAt=~/etc/heap
+   > ```
+   > This option takes file path and do a memory mapping to achieve the desired result.
 
   </details>
 
   <details>
    <summary>Consolidate the JDK Forest into a Single Repository (JEP-296)</summary>
 
-   > 
-   > 
-   > 
-   > [Example](src/main/java10/Example1.java)
+   > In JDK 9, the source code was located in eight separate Mercurial repositories, which often led to considerable additional work during development. 
+   > For over a thousand changes, it was necessary to distribute logically related commits across multiple repositories.
+   >
+   > With JEP 296, the entire JDK source code was consolidated into a monorepo. The monorepo now allows atomic commits, branches, and pull requests, making development on the JDK much easier.
 
   </details>
 
   <details>
    <summary>Application Class-Data Sharing (JEP-310)</summary>
 
+   > When JVM starts it loads the classes in memory as a preliminary step. In case there are multiple jars having multiple classes, an evident lags appears for the first request. 
+   >
+   > In serverless architecture, such a lag can delay the boot time which is a critical operation in such an architecture. 
+   > Application class-data sharing concept helps in reducing the start up time of an application. 
+   >
+   > Java has an existing CDS (Class-Data Sharing) feature. With Application class-data sharing, Java 10 allows to put application classes in a shared archive. 
+   >
+   > This reduces the application startup and footprint by sharing a common class meta data across multiple java processes.
    > 
-   > 
-   > 
-   > [Example](src/main/java10/Example1.java)
+   > Application Class data sharing is a 3 step process.
+   >  - **Create a list of Classes to archive**
+   >
+   >      Create a list `welcome.lst` of a class `Greeting.java` lying in `welcome.jar` using Java Launcher.
+   >      ```bash
+   >      > java -Xshare:off -XX:+UseAppCDS -XX:DumpLoadedClassList=welcome.lst -cp welcome.jar Greeting
+   >      ```
+   >  - **Create AppCDS archive**
+   >
+   >      Archive a list of classes to be used for Application class data sharing into a `welcome.jsa` file.
+   >      ```bash
+   >      > java -Xshare:dump -XX:+UseAppCDS -XX:SharedClassListFile=welcome.lst -XX:SharedArchiveFile=welcome.jsa -cp welcome.jar
+   >      ```
+   >  - **Use AppCDS archive**
+   >
+   >      Use AppCDS archive while using java launcher.
+   >      ```bash
+   >      > java -Xshare:on -XX:+UseAppCDS -XX:SharedArchiveFile=welcome.jsa -cp welcome.jar Greeting
+   >      ```
 
   </details>
 
   <details>
    <summary>Additional Unicode Language-Tag Extensions (JEP-314)</summary>
 
+   > Java 7 introduced support for BCP 47 adds so-called "language-tag extensions". 
+   > But this unicode locale extensions was limited to calendar and numbers. 
+   >
+   > With Java 10, `java.util.Locale` and related classes are updated to implement additional unicode extensions as specified in LDML specification. 
+   > Following additional extensions are added:
+   >  − cu / Currency Types
+   >  - fw / First Day of a Week
+   >  - rg / Region Override
+   >  - tz / Time Zone
    > 
-   > 
-   > 
-   > [Example](src/main/java10/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java10/Example3.java)
 
   </details>
 
   <details>
    <summary>Root Certificates (JEP-319)</summary>
 
-   > 
-   > 
-   > 
-   > [Example](src/main/java10/Example1.java)
+   > Until Java 9, the OpenJDK did not include root certificates in the cacerts keystore file, so SSL/TLS-based features were not readily executable.
+   >
+   > With JDK Enhancement Proposal 319, the root certificates contained in the Oracle JDK were adopted in the OpenJDK.
 
   </details>
 
   <details>
    <summary>Experimental Java-Based JIT Compiler (JEP-317)</summary>
 
+   > JIT compiler is written in C++ and is used to convert Java into Byte Code.
+   >
+   > Now Java 10 has option to enable an experimental Java based JIT compiler, Graal to be used instead of standard JIT compiler.
    > 
-   > 
-   > 
-   > [Example](src/main/java10/Example1.java)
+   > Graal compiler is a complete rewrite of C++ based earlier compiler and is targeted for Linux/x64 based platform.
+   > Graal is using JVMCI, JVM Compiler Interface which was introduced in Java 9.
+   >
+   > We can enable Graal to test and debug the experimental JVM compiler.
+   > ```bash
+   > java -XX:+UnlockExperimentalVMOptions -XX:+UseJVMCICompiler
+   > ```
+   > As Graal is experimental and is subject to testing effort considering various Hotspots and jdk tests with various flag options. It may fail some benchmarks for performance as compared to standard JIT Ahead of Time compilers.
 
   </details>
 
   <details>
    <summary>Thread-Local Handshakes (JEP-312)</summary>
 
+   > Thread-local handshakes are an optimization to improve VM performance on x64 and SPARC-based architectures. The optimization is enabled by default.
    > 
-   > 
-   > 
-   > [Example](src/main/java10/Example1.java)
+   > In JDK 10, a new option is introduced for JVM as `-XX:ThreadLocalHandshakes`. This options works only for x64 and SPARC based machines.
 
   </details>
 
   <details>
    <summary>Remove the Native-Header Generation Tool (JEP-313)</summary>
 
+   > Tool `javah` has been removed from Java 10 which generated C headers and source files which were required to implement native methods – now, `javac -h` can be used instead.
+
+  </details>  
+
+  <details>
+   <summary>Container Awareness</summary>
+
+   > JVMs are now aware of being run in a Docker container and will extract container-specific configuration instead of querying the operating system 
+   > itself – it applies to data like the number of CPUs and total memory that have been allocated to the container.
    > 
-   > 
-   > 
-   > [Example](src/main/java10/Example1.java)
+   > However, this support is only available for Linux-based platforms. This new support is enabled by default and can be disabled in the command line with the JVM option:
+   > ```bash
+   > -XX:-UseContainerSupport
+   > ```
+   > Also, this change adds a JVM option that provides the ability to specify the number of CPUs that the JVM will use:
+   > ```bash
+   > -XX:ActiveProcessorCount=count
+   > ```
+   > Also, three new JVM options have been added to allow Docker container users to gain more fine-grained control over the amount of system memory that will be used for the Java Heap:
+   > ```bash
+   > -XX:InitialRAMPercentage
+   > -XX:MaxRAMPercentage
+   > -XX:MinRAMPercentage
+   > ```
 
   </details>  
 

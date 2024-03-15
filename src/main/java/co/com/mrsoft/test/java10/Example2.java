@@ -1,6 +1,5 @@
 package co.com.mrsoft.test.java10;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
