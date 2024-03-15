@@ -749,6 +749,104 @@ Project to do some Java practices and summarize the new features per Java versio
 
   </details>  
 
+  <details>
+   <summary>New APIs & Options</summary>
+
+   > Following are some of the important enhancements introduced.
+   >  - **Optional.orElseThrow() Method**
+   >    * The method is an exact copy of the `get()` method but it throws a `NoSuchElementException` if no value is present.
+   >  - **APIs to create Unmodifiable Collections**
+   >    * A new method `copyOf()` is available in `List`, `Set` and `Map` interfaces which can create new collection instances 
+   > from existing one. 
+   >    * `Collector` class has new methods `toUnmodifiableList()`, `toUnmodifiableSet()`, and `toUnmodifiableMap()` 
+   > to get elements of a stream into an unmodifiable collection.
+   >  - **Disable JRE Last Usage Tracking**
+   >    * A new flag is introduced `jdk.disableLastUsageTracking` which disables JRE last usage tracking for a running VM.
+   >  - **Hashed Password**
+   >    * The plain text passwords available in the `jmxremote.password` file are now being over-written with 
+   > their `SHA3-512` hash by the JMX agent.
+   >  - **javadoc Support for Multiple Stylesheets**
+   >    * A new option is available to `javadoc` command as `--add-stylesheet`. This option supports use of multiple 
+   > stylesheets in generated documentation.
+   >  - **javadoc Support for Overridding methods**
+   >    * A new option is available to `javadoc` command as `--overridden-methods=value`. As many classes override inherited 
+   > methods but do not change the specification. The `--overridden-methods=value` option allows to group these methods 
+   > with other inherited methods, instead of documenting them again separately.
+   >  - **javadoc Support for Summary**
+   >    * A new inline tag, `{@summary ...}`, is available to specify the text to be used as the summary of the 
+   > API description. By default, the summary of an API description is inferred from the first sentence.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java10/Example2.java)
+
+  </details>  
+
+  <details>
+   <summary>Removed Features & Options</summary>
+
+   > JDK 10 release has removed several deprecated APIs, features and Options from Java library. Following is the relevant details.
+   >  - **Unsupported LookAndFeels removed**
+   >    * Applications using Nimbus or Aqua LookAndFeels has to migrate to new syntax.
+   >  - **Runtime.getLocalizedInputStream and getLocalizedOutputStream Methods removed**
+   >    * `Runtime.getLocalizedInputStream` and `Runtime.getLocalizedOutputStream` Methods are no more available as they were part of an obsolete internationalization mechanism.
+   >  - **RMI Server-Side Multiplex Protocol Support removed**
+   >    * RMI Server-Side Multiplex Protocol was disabled in Java 9 and is removed in Java 10.
+   >  - **Common DOM APIs removed**
+   >    * `com.sun.java.browser.plugin2.DOM`, and `sun.plugin.dom.DOMObject APIs` have been removed. `netscape.javascript.JSObject` is available to modify the DOM.
+   >  - **FlatProfiler removed**
+   >    * FlatProfiler was deprecated in Java 9 and is removed in Java 10.
+   >  - **Obsolete -X Options removed**
+   >    * `-Xoss`, `-Xsqnopause`, `-Xoptimize`, `-Xboundthreads`, and `-Xusealtsigs`, obsolete Hotspot VM options are removed in java 10.
+   >  - **HostServicesgetWebContext Method removed**
+   >    * `HostServicesgetWebContext` Method was deprecated in Java 9 and is removed in Java 10.
+   >  - **T2K Rasterizer and ICU Layout Engine removed**
+   >    * T2K rasterizer and ICU layout engine have been removed from JavaFX.
+   >  - **VP6/FXM/FLV Code removed**
+   >    * P6 video encoding format and FXM/FLV container support has been removed in JavaFX Media. H.264/AVC1 in the MP4 container or HTTP Live Streaming is to be used instead.
+   >  - **Pre-1.2 SecurityManager Methods and Fields removed**
+   >    * The pre-1.2 deprecated java.lang.SecurityManager methods and fields(marked forRemoval=true) have been removed.
+   >  - **policytool removed**
+   >    * The policytool security tool has been removed.
+   >  - **Deprecated Classes in com.sun.security.auth package removed**
+   >    * com.sun.security.auth.PolicyFile
+   >    * com.sun.security.auth.SolarisNumericGroupPrincipal
+   >    * com.sun.security.auth.SolarisNumericUserPrincipal
+   >    * com.sun.security.auth.SolarisPrincipal
+   >    * com.sun.security.auth.X500Principal
+   >    * com.sun.security.auth.module.SolarisLoginModule
+   >    * com.sun.security.auth.module.SolarisSystem
+   >  - **Old(JDK 6, JDK 7, and JDK 8 Era) Standard Doclet removed**
+   >    * The old (JDK 6, JDK 7 and JDK 8 era) standard doclet, used to output HTML content, and are superseded by a replacement, has been removed.
+   >  - **javah tool removed**
+   >    * The Native-Header Generation Tool, javah has been removed.
+   >  - **Java Launcher's Data Model Options -d32 and -d64 removed**
+   >    * The obsolete and deprecated selection options (-d32, -d64, -J-d32 and -J-d64) have been removed.
+   > 
+
+  </details>  
+
+  <details>
+   <summary>Deprecated Features & Options</summary>
+
+   > JDK 10 release has deprecated several APIs, features and Options from Java library. Following is the relevant details.
+   >  - **SNMP Monitoring Support deprecated**
+   >    * `jdk.snmp` module supporting SNMP monitoring and management support for the JVM is now deprecated and is marked `forRemoval=true`.
+   >  - **java.security classes deprecated**
+   >    * `java.security.{Certificate, Identity, IdentityScope, Signer}` classes are now deprecated and is marked `forRemoval=true`.
+   >  - **javax.security.auth.Policy API forRemoval**
+   >    * The deprecated `javax.security.auth.Policy` is marked `forRemoval=true`.
+   >  - **APIs marked for removal**
+   >    * java.activation
+   >    * java.corba
+   >    * java.se.ee (aggregator)
+   >    * java.transaction
+   >    * java.xml.bind
+   >    * java.xml.ws
+   >    * java.xml.ws.annotation
+   > 
+
+  </details>  
+
+
 ## Links for reference
 ### Java 8
  * https://mkyong.com/tutorials/java-8-tutorials/
