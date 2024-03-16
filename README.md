@@ -610,30 +610,6 @@ Project to do some Java practices and summarize the new features per Java versio
 
 ## Java 10
   <details>
-   <summary>Time-Based Release Versioning (JEP-322)</summary>
-
-   > From Java 10 onwards, Oracle has introduced a strict time based release versioning model for Java releases. 
-   > Now Java will have a major release after every six months.
-   > 
-   > Releases are further categoried into three broad categories:
-   >  - **Feature Release:** It contains language specific features, JVM features, New/Improved APIs, Removal/Deprecation of APIs. 
-   > Time of these feature releases is fixed and there is no constraint on features to be included in a particular release.
-   >  - **Update Release:** It includes bug fixes, security issue fix, regression fixes etc. Each Feature release will receive 
-   > two Update releases before next feature release is announced.
-   >  - **Long Term Support(LTS) Release:** Long term support release will be announced after every three years starting from Sep, 2018. 
-   > This release is primarily for Corporates using Java in production deployments.
-   > 
-   > A version now follows the following format: `$FEATURE.$INTERIM.$UPDATE.$PATCH`
-   >  - **$FEATURE:** This number denotes the major feature release and will get incremented by 1 after every Feature Release.
-   >  - **$INTERIM:** This number denotes any non-feature, non-update release which contains bug fixes and enhancements. 
-   > This release is not having any incompatible changes, any API removal or change to standard API. 
-   > A Feature release, will have this counter as 0.
-   >  - **$UPDATE:** This number denotes the Update release done after a Feature Release.
-   >  - **$PATCH:** This number denotes any emergency release incremented only in case an critical issue is to be promoted on emergent basis.
-   >
-  </details>
-
-  <details>
    <summary>Local Variable Type Inference (JEP-286)</summary>
 
    > It allows to define a variable using var and without specifying the type of it. 
@@ -646,6 +622,16 @@ Project to do some Java practices and summarize the new features per Java versio
    >  - No dynamic type change. Once type of local variable is inferred it cannot be changed.
    > 
    > [Example](src/main/java/co/com/mrsoft/test/java10/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Consolidate the JDK Forest into a Single Repository (JEP-296)</summary>
+
+   > In JDK 9, the source code was located in eight separate Mercurial repositories, which often led to considerable additional work during development. 
+   > For over a thousand changes, it was necessary to distribute logically related commits across multiple repositories.
+   >
+   > With JEP 296, the entire JDK source code was consolidated into a monorepo. The monorepo now allows atomic commits, branches, and pull requests, making development on the JDK much easier.
 
   </details>
 
@@ -674,29 +660,6 @@ Project to do some Java practices and summarize the new features per Java versio
    > ```bash
    > >java -XX:ParallelGCThreads=4
    > ```
-
-  </details>
-
-  <details>
-   <summary>Heap Allocation on Alternative Memory Devices (JEP-316)</summary>
-
-   > With this enhancement in Java 10, now user can specify an alternative memory device, like NV-DIMM to HotSpot VM to allocation the java heap space. 
-   >
-   > User need to pass a path to the file system using a new option `-XX:AllocateHeapAt`.
-   > ```bash
-   > >-XX:AllocateHeapAt=~/etc/heap
-   > ```
-   > This option takes file path and do a memory mapping to achieve the desired result.
-
-  </details>
-
-  <details>
-   <summary>Consolidate the JDK Forest into a Single Repository (JEP-296)</summary>
-
-   > In JDK 9, the source code was located in eight separate Mercurial repositories, which often led to considerable additional work during development. 
-   > For over a thousand changes, it was necessary to distribute logically related commits across multiple repositories.
-   >
-   > With JEP 296, the entire JDK source code was consolidated into a monorepo. The monorepo now allows atomic commits, branches, and pull requests, making development on the JDK much easier.
 
   </details>
 
@@ -735,6 +698,22 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
   <details>
+   <summary>Thread-Local Handshakes (JEP-312)</summary>
+
+   > Thread-local handshakes are an optimization to improve VM performance on x64 and SPARC-based architectures. The optimization is enabled by default.
+   > 
+   > In JDK 10, a new option is introduced for JVM as `-XX:ThreadLocalHandshakes`. This options works only for x64 and SPARC based machines.
+
+  </details>
+
+  <details>
+   <summary>Remove the Native-Header Generation Tool (JEP-313)</summary>
+
+   > Tool `javah` has been removed from Java 10 which generated C headers and source files which were required to implement native methods – now, `javac -h` can be used instead.
+
+  </details>
+
+  <details>
    <summary>Additional Unicode Language-Tag Extensions (JEP-314)</summary>
 
    > Java 7 introduced support for BCP 47 adds so-called "language-tag extensions". 
@@ -752,11 +731,15 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
   <details>
-   <summary>Root Certificates (JEP-319)</summary>
+   <summary>Heap Allocation on Alternative Memory Devices (JEP-316)</summary>
 
-   > Until Java 9, the OpenJDK did not include root certificates in the cacerts keystore file, so SSL/TLS-based features were not readily executable.
+   > With this enhancement in Java 10, now user can specify an alternative memory device, like NV-DIMM to HotSpot VM to allocation the java heap space. 
    >
-   > With JDK Enhancement Proposal 319, the root certificates contained in the Oracle JDK were adopted in the OpenJDK.
+   > User need to pass a path to the file system using a new option `-XX:AllocateHeapAt`.
+   > ```bash
+   > >-XX:AllocateHeapAt=~/etc/heap
+   > ```
+   > This option takes file path and do a memory mapping to achieve the desired result.
 
   </details>
 
@@ -779,20 +762,37 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
   <details>
-   <summary>Thread-Local Handshakes (JEP-312)</summary>
+   <summary>Root Certificates (JEP-319)</summary>
 
-   > Thread-local handshakes are an optimization to improve VM performance on x64 and SPARC-based architectures. The optimization is enabled by default.
-   > 
-   > In JDK 10, a new option is introduced for JVM as `-XX:ThreadLocalHandshakes`. This options works only for x64 and SPARC based machines.
+   > Until Java 9, the OpenJDK did not include root certificates in the cacerts keystore file, so SSL/TLS-based features were not readily executable.
+   >
+   > With JDK Enhancement Proposal 319, the root certificates contained in the Oracle JDK were adopted in the OpenJDK.
 
   </details>
 
   <details>
-   <summary>Remove the Native-Header Generation Tool (JEP-313)</summary>
+   <summary>Time-Based Release Versioning (JEP-322)</summary>
 
-   > Tool `javah` has been removed from Java 10 which generated C headers and source files which were required to implement native methods – now, `javac -h` can be used instead.
-
-  </details>  
+   > From Java 10 onwards, Oracle has introduced a strict time based release versioning model for Java releases. 
+   > Now Java will have a major release after every six months.
+   > 
+   > Releases are further categoried into three broad categories:
+   >  - **Feature Release:** It contains language specific features, JVM features, New/Improved APIs, Removal/Deprecation of APIs. 
+   > Time of these feature releases is fixed and there is no constraint on features to be included in a particular release.
+   >  - **Update Release:** It includes bug fixes, security issue fix, regression fixes etc. Each Feature release will receive 
+   > two Update releases before next feature release is announced.
+   >  - **Long Term Support(LTS) Release:** Long term support release will be announced after every three years starting from Sep, 2018. 
+   > This release is primarily for Corporates using Java in production deployments.
+   > 
+   > A version now follows the following format: `$FEATURE.$INTERIM.$UPDATE.$PATCH`
+   >  - **$FEATURE:** This number denotes the major feature release and will get incremented by 1 after every Feature Release.
+   >  - **$INTERIM:** This number denotes any non-feature, non-update release which contains bug fixes and enhancements. 
+   > This release is not having any incompatible changes, any API removal or change to standard API. 
+   > A Feature release, will have this counter as 0.
+   >  - **$UPDATE:** This number denotes the Update release done after a Feature Release.
+   >  - **$PATCH:** This number denotes any emergency release incremented only in case an critical issue is to be promoted on emergent basis.
+   >
+  </details>
 
   <details>
    <summary>Container Awareness</summary>
@@ -912,8 +912,162 @@ Project to do some Java practices and summarize the new features per Java versio
    >    * java.xml.ws.annotation
    > 
 
-  </details>  
+  </details>
 
+## Java 11
+  <details>
+   <summary>Nest-Based Access Control (JEP-181)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Dynamic Class-File Constants (JEP-309)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Improve Aarch64 Intrinsics (JEP-315)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Epsilon, A No-Op Garbage Collector (JEP-318)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Remove the Java EE and CORBA Modules (JEP-320)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>HTTP Client API standardized (JEP-321)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Local-Variable Syntax for Lambda Parameters (JEP-323)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Key Agreement with Curve25519 and Curve448 (JEP-324)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Unicode 10 (JEP-327)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Flight Recorder (JEP-328)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>ChaCha20 and Poly1305 Cryptographic Algorithms (JEP-329)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Launch Single-File Source-Code Programs without compilation (JEP-330)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Low-Overhead Heap Profiling (JEP-331)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Transport Layer Security (TLS) 1.3 (JEP-332)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>ZGC A Scalable Low-Latency Garbage Collector (JEP-333)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Deprecate the Nashorn JavaScript Engine (JEP-335)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Deprecate the Pack200 Tools and API (JEP-336)</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Collection API Updates</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>String API Updates</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Files API Updates</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Optional Updates</summary>
+   >
+   >
+   >
+  </details>
+
+  <details>
+   <summary>Removed / Deprecated API</summary>
+   >
+   >
+   >
+  </details>
 
 ## Links for reference
 ### Java 8
@@ -938,8 +1092,11 @@ Project to do some Java practices and summarize the new features per Java versio
  * https://www.happycoders.eu/java/java-10-features/
   
 ### Java 11
+ * https://www.happycoders.eu/java/java-11-features/
+ * https://mkyong.com/java/what-is-new-in-java-11/ 
+ * https://www.tutorialspoint.com/java11/java11_overview.htm
+ * https://www.baeldung.com/java-11-new-features
  * https://www.digitalocean.com/community/tutorials/java-11-features
- * https://mkyong.com/java/what-is-new-in-java-11/
 
 ### Java 17
  * https://mkyong.com/java/what-is-new-in-java-17/
