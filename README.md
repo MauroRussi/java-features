@@ -11,6 +11,8 @@
 Project to do some Java practices and summarize the new features per Java version since Java 8.
 
 ## Java 8
+  #### Long-term support version / Class file version 52 / Release date 18th March 2014
+
   <details>
    <summary>Functional interfaces</summary>
 
@@ -264,6 +266,8 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
 ## Java 9
+  #### Feature release / Class file version 53 / Release date 21st September 2017
+
   <details>
    <summary>Module System</summary>
 
@@ -609,6 +613,8 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
 ## Java 10
+  #### Feature release / Class file version 54 / Release date 20th March 2018
+
   <details>
    <summary>Local Variable Type Inference (JEP-286)</summary>
 
@@ -915,6 +921,8 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
 ## Java 11
+  #### Long-term support version / Class file version 55 / Release date 25th September 2018
+
   <details>
    <summary>Nest-Based Access Control (JEP-181)</summary>
    >
