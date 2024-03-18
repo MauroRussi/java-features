@@ -492,7 +492,6 @@ Project to do some Java practices and summarize the new features per Java versio
 
   </details>
 
-
   <details>
    <summary>CompletableFuture API improvements</summary>
 
@@ -985,28 +984,55 @@ Project to do some Java practices and summarize the new features per Java versio
    > 
    > P.S An intrinsic is used to leverage CPU architecture-specific assembly code to improve the performance.
    >
-   
+
   </details>
 
   <details>
    <summary>Epsilon, A No-Op Garbage Collector (JEP-318)</summary>
+
+   > A new No-Op (no operations) Garbage Collector, it allocates memory but will not collect any garbage (memory allocation), once the Java heap is exhausted, the JVM will shut down.
    >
+   > A few use cases:
+   >  * Performance testing
+   >  * VM interface testing
+   >  * Short-lived jobs
    >
-   >
+   >  This GC is an experimental feature; we need to use the following options to enable the new Epsilon GC:
+   > ```bash
+   > -XX:+UnlockExperimentalVMOptions -XX:+UseEpsilonGC
+   > ```
+
   </details>
 
   <details>
    <summary>Remove the Java EE and CORBA Modules (JEP-320)</summary>
+
+   > Java 9 deprecated the following Java EE and CORBA modules and now removed in Java 11. If you want to migrate to Java 11, make sure your project didn’t 
+   > use any of the following packages or tools.
    >
-   >
-   >
+   > Removed packages:
+   >  * java.xml.ws (JAX-WS)
+   >  * java.xml.bind (JAXB)
+   >  * java.activation (JAF)
+   >  * java.xml.ws.annotation (Common Annotations)
+   >  * java.corba (CORBA)
+   >  * java.transaction (JTA)
+   >  * java.se.ee (Aggregator module for the six modules above)
+   >   
+   >  Removed Tools:
+   >  * wsgen and wsimport (from jdk.xml.ws)
+   >  * schemagen and xjc (from jdk.xml.bind)
+   >  * idlj, orbd, servertool, and tnamesrv (from java.corba)
+
   </details>
 
   <details>
    <summary>HTTP Client API standardized (JEP-321)</summary>
-   >
-   >
-   >
+
+   > This `HTTP Client API`, in the `java.net.http` package was introduced in Java 9, updated in Java 10, now a standard feature in Java 11.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java9/Example9.java)
+
   </details>
 
   <details>
