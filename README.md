@@ -1067,23 +1067,50 @@ Project to do some Java practices and summarize the new features per Java versio
 
   <details>
    <summary>Flight Recorder (JEP-328)</summary>
+
+   > Java Flight Recorder (JFR) was a commercial product in Oracle JDK, now it is open source in OpenJDK 11. 
+   > This JFR is a profiling tool that used to diagnose a running Java application. 
    >
-   >
-   >
+   > The below command starts a 60 seconds JFR recording on a Java application, dumps the recorded data into a `.jfr` file:
+   > ```bash
+   > > java -XX:StartFlightRecording=duration=60s,settings=profile,filename=app.jfr MyHelloWorldApp
+   > ```
+   > You can use Java Mission Control (JMC) to analyze and visualize the `.jfr` file.
+
   </details>
 
   <details>
    <summary>ChaCha20 and Poly1305 Cryptographic Algorithms (JEP-329)</summary>
-   >
-   >
-   >
+
+   > ChaCha20 is a high-speed stream cipher, an encryption and decryption algorithm. 
+   > 
+   > ChaCha20-Poly1305 means ChaCha20 running in AEAD mode with the Poly1305 authenticator, 
+   > encryption and authentication together, both are defined in RFC 7539. 
+   > 
+   > This JEP update of ChaCha20 cryptographic algorithms is a replacement for the insecure RC4 stream cipher.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java11/Example4.java)
+
   </details>
 
   <details>
    <summary>Launch Single-File Source-Code Programs without compilation (JEP-330)</summary>
+
+   > This Single-File Source-Code Program means the entire Java program in a single source code `.java` file. 
+   > 
+   > This JEP is a friendly feature in the early stage of learning Java, but not much benefit in Java development, 
+   > we all use IDE.
    >
-   >
-   >
+   > Before Java 11:
+   > ```bash
+   > > javac HelloJava.java
+   > > java HelloJava
+   > ```
+   > Now Java 11:
+   > ```bash
+   > > java HelloJava.java
+   > ```
+
   </details>
 
   <details>
