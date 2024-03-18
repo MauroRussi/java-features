@@ -925,23 +925,67 @@ Project to do some Java practices and summarize the new features per Java versio
 
   <details>
    <summary>Nest-Based Access Control (JEP-181)</summary>
+
+   > It supports `private` access within nest members directly, no more via an auto-generated bridge method `access$000`.
+   > 
+   > Furthermore, new nested APIs for validation and allowed private reflection access within nest members.
    >
+   > Before Java 11:
+   > ```java
+   > public class Alphabet {
+   >  private String name = "I'm Alphabet!";
+   > 
+   >  public class A {
+   >      public void printName() {
+   >          System.out.println(name);       // access Alphabet's private member!
+   >      }
+   >  }
+   > }
+   > ```
+   > If we compile the above class, it will generate two classes, `Alphabet` and `Alphabet$A`, even a nested class is a typical class with a unique name. 
+   > 
+   > The JVM access rule will not allow `private` access within different classes. 
+   > However, Java allowed `private` access within nest members, so the Java compiler creates a bridge method `access$000` to apply on the JVM access rule.
+   > ```java
+   > // After javac Alphabet.java, Java compiler created something similar to this.
+   > public class Alphabet {
+   >   private String name = "I'm Alphabet!";
+   >   String access$000(){
+   >     return name;
+   >   }
+   > }
+   > 
+   > public class Alphabet$A {
+   >   final Alphabet obj;
+   >   public void printName(){
+   >     System.out.println(obj.access$000());
+   >   }
+   > }
+   > ```
+   > In Java 11, The Java compiler will not generate any bridge method `access$000` for `private` access within nest members. 
+   > 
+   > This new JVM access rule, Nest-Based Access Control allowed private access within nest members.
    >
-   >
+
   </details>
 
   <details>
    <summary>Dynamic Class-File Constants (JEP-309)</summary>
+
+   > Extends class-file format to support a new constant-pool form, `CONSTANT_Dynamic`, target language designers and compiler implementors.
    >
-   >
-   >
+
   </details>
 
   <details>
    <summary>Improve Aarch64 Intrinsics (JEP-315)</summary>
+
+   > Optimized the existing string and array intrinsics, and implements new intrinsics for `Math.sin()`, `Math.cos()` and `Match.log()` on Arm64 or Aarch64 processors. 
+   > It means better performance.
+   > 
+   > P.S An intrinsic is used to leverage CPU architecture-specific assembly code to improve the performance.
    >
-   >
-   >
+   
   </details>
 
   <details>
