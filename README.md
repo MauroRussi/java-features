@@ -1037,23 +1037,32 @@ Project to do some Java practices and summarize the new features per Java versio
 
   <details>
    <summary>Local-Variable Syntax for Lambda Parameters (JEP-323)</summary>
+
+   > This JEP adds support for the `var` keyword in lambda parameters instead of the explicit types.
    >
-   >
-   >
+   > The benefit is we can add annotations to the lambda parameters without explicit types, only with `var` keyword.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java11/Example1.java)
+
   </details>
 
   <details>
    <summary>Key Agreement with Curve25519 and Curve448 (JEP-324)</summary>
+   
+   > Java Cryptography related item. It replaced the existing elliptic curve Diffie-Hellman (ECDH) scheme 
+   > with `Curve25519` and `Curve448` algorithms, a key agreement scheme defined in RFC 7748.
    >
-   >
-   >
+   > [Example](src/main/java/co/com/mrsoft/test/java11/Example2.java)
+
   </details>
 
   <details>
    <summary>Unicode 10 (JEP-327)</summary>
-   >
-   >
-   >
+
+   > It means more code points, more emoji icons :)
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java11/Example3.java)
+
   </details>
 
   <details>
