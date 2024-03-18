@@ -1115,30 +1115,40 @@ Project to do some Java practices and summarize the new features per Java versio
 
   <details>
    <summary>Low-Overhead Heap Profiling (JEP-331)</summary>
-   >
-   >
-   >
+
+   > Java Virtual Machine Tool Interface (JVMTI) was introduced in J2SE 5, JDK 5 (Tiger), it provides APIs 
+   > for profiling or monitoring tools to access the JVM state. 
+   > 
+   > This JEP added new low overhead heap profiling API into the JVMIT.
+
   </details>
 
   <details>
    <summary>Transport Layer Security (TLS) 1.3 (JEP-332)</summary>
+
+   > Java 11 supports RFC 8446 Transport Layer Security (TLS) 1.3 protocol. 
+   > 
+   > However, not all TLS 1.3 feature is implemented, refer to this JEP 332 for detail.
    >
-   >
-   >
+   > [Example](src/main/java/co/com/mrsoft/test/java11/Example5.java)
+
   </details>
 
   <details>
    <summary>ZGC A Scalable Low-Latency Garbage Collector (JEP-333)</summary>
-   >
-   >
-   >
+
+   > The Z Garbage Collector (ZGC) is an experimental garbage collector; it has low pause times not exceed 10ms. 
+   > 
+   > This ZCG support only on Linux/64.
+
   </details>
 
   <details>
    <summary>Deprecate the Nashorn JavaScript Engine (JEP-335)</summary>
-   >
-   >
-   >
+
+   > The Nashorn JavaScript script engine and the `jjs` tool are deprecated, and it will probably 
+   > remove in the future release.
+
   </details>
 
   <details>
