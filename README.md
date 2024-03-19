@@ -1205,6 +1205,127 @@ Project to do some Java practices and summarize the new features per Java versio
 
   </details>
 
+## Java 12
+  #### Feature release / Class file version 56 / Release date 19th March 2019
+
+  <details>
+   <summary>Nest-Based Access Control (JEP-181)</summary>
+
+   > 
+   > 
+   >
+
+  </details>
+
+  <details>
+   <summary>Shenandoah: A Low-Pause-Time Garbage Collector (JEP-189)</summary>
+
+   > 
+   > 
+   >
+
+  </details>
+
+  <details>
+   <summary>Microbenchmark Suite (JEP-230)</summary>
+
+   > 
+   > 
+   >
+
+  </details>
+
+  <details>
+   <summary>Switch Expressions (JEP-325)</summary>
+
+   > 
+   > 
+   >
+
+  </details>
+
+  <details>
+   <summary>JVM Constants API (JEP-334)</summary>
+
+   > 
+   > 
+   >
+
+  </details>
+
+  <details>
+   <summary>One AArch64 Port, Not Two (JEP-340)</summary>
+
+   > 
+   > 
+   >
+
+  </details>
+
+  <details>
+   <summary>Default CDS Archives (JEP-341)</summary>
+
+   > 
+   > 
+   >
+
+  </details>
+
+  <details>
+   <summary>Abortable Mixed Collections for G1 (JEP-344)</summary>
+
+   > 
+   > 
+   >
+
+  </details>
+
+  <details>
+   <summary>Promptly Return Unused Committed Memory from G1 (JEP-346)</summary>
+
+   > 
+   > 
+   >
+
+  </details>
+
+  <details>
+   <summary>String API Updates</summary>
+
+   > 
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>Files API Updates</summary>
+
+   > 
+   > 
+   >
+
+  </details>
+
+  <details>
+   <summary>Compact Number Formatting</summary>
+
+   > 
+   > 
+   >
+
+  </details>
+
+  <details>
+   <summary>Teeing Collector in Stream API</summary>
+
+   > 
+   > 
+   >
+
+  </details>
+
+
 ## Links for reference
 ### Java 8
  * https://mkyong.com/tutorials/java-8-tutorials/
@@ -1233,6 +1354,13 @@ Project to do some Java practices and summarize the new features per Java versio
  * https://www.tutorialspoint.com/java11/java11_overview.htm
  * https://www.baeldung.com/java-11-new-features
  * https://www.digitalocean.com/community/tutorials/java-11-features
+
+### Java 12
+ * https://www.happycoders.eu/java/java-12-features/
+ * https://mkyong.com/java/what-is-new-in-java-12/ 
+ * https://www.tutorialspoint.com/java12/java12_overview.htm
+ * https://www.baeldung.com/java-12-new-features
+ * https://www.digitalocean.com/community/tutorials/java-12-features
 
 ### Java 17
  * https://mkyong.com/java/what-is-new-in-java-17/
