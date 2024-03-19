@@ -1153,37 +1153,47 @@ Project to do some Java practices and summarize the new features per Java versio
 
   <details>
    <summary>Deprecate the Pack200 Tools and API (JEP-336)</summary>
-   >
-   >
-   >
+
+   > This JEP deprecates the `pack200` and `unpack200` tools, and the `Pack200` API in `java.util.jar` package, 
+   > and it will probably remove in the future release.
+
   </details>
 
   <details>
    <summary>Collection API Updates</summary>
-   >
-   >
-   >
+
+   > Java 11 introduced an easy way to convert a collection to an array.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java11/Example7.java)
+
   </details>
 
   <details>
    <summary>String API Updates</summary>
-   >
-   >
-   >
+
+   > Java 11 introduced multiple enhancements to String.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java11/Example6.java)
+
   </details>
 
   <details>
    <summary>Files API Updates</summary>
+
+   > Java 11 introduced an easy way to read and write files by providing new overloaded methods 
+   > without writing much boiler plate code.
    >
-   >
-   >
+   > [Example](src/main/java/co/com/mrsoft/test/java11/Example8.java)
+
   </details>
 
   <details>
    <summary>Optional Updates</summary>
-   >
-   >
-   >
+
+   > Java 11 introduces new methods in the Optional class.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java11/Example9.java)
+
   </details>
 
   <details>
