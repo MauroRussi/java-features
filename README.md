@@ -1171,7 +1171,7 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>String API Updates</summary>
 
-   > Java 11 introduced multiple enhancements to String.
+   > Java 11 introduced multiple enhancements to `String`.
    > 
    > [Example](src/main/java/co/com/mrsoft/test/java11/Example6.java)
 
@@ -1190,17 +1190,19 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Optional Updates</summary>
 
-   > Java 11 introduces new methods in the Optional class.
+   > Java 11 introduces new methods in the `Optional` class.
    > 
    > [Example](src/main/java/co/com/mrsoft/test/java11/Example9.java)
 
   </details>
 
   <details>
-   <summary>Removed / Deprecated API</summary>
-   >
-   >
-   >
+   <summary>Predicate Updates</summary>
+
+   > Java 11 introduces a `not` method in the `Predicate` class.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java11/Example10.java)
+
   </details>
 
 ## Links for reference
