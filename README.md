@@ -1209,38 +1209,34 @@ Project to do some Java practices and summarize the new features per Java versio
   #### Feature release / Class file version 56 / Release date 19th March 2019
 
   <details>
-   <summary>Nest-Based Access Control (JEP-181)</summary>
-
-   > 
-   > 
-   >
-
-  </details>
-
-  <details>
    <summary>Shenandoah: A Low-Pause-Time Garbage Collector (JEP-189)</summary>
 
+   > Shenandoah is a new low-pause and concurrent garbage collector, it reduces GC pause time and independent of the 
+   > Java heap size (5M or 5G of heap size have the same pause time, useful for large heap applications.)
    > 
-   > 
-   >
+   > This GC is an experimental feature, and we need to use the following options to enable the new Shenandoah GC:
+   > ```bash
+   > -XX:+UnlockExperimentalVMOptions -XX:+UseShenandoahGC
+   > ```
 
   </details>
 
   <details>
    <summary>Microbenchmark Suite (JEP-230)</summary>
 
-   > 
-   > 
-   >
+   > Added a range of Java Microbenchmark Harness (JMH) benchmarks to the JDK source code, 
+   > for those interested to add or modify the JDK source code itself, now they have a way 
+   > to compare the performance.
 
   </details>
 
   <details>
    <summary>Switch Expressions (JEP-325)</summary>
 
+   > This feature enhanced the existing `switch` statements (returns nothing) to support 
+   > `switch` expressions (returns something).
    > 
-   > 
-   >
+   > [Example](src/main/java/co/com/mrsoft/test/java12/Example1.java)
 
   </details>
 
