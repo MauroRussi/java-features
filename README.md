@@ -1293,9 +1293,9 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>String API Updates</summary>
 
+   > Java 12 introduced multiple enhancements to String.
    > 
-   > 
-   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java12/Example2.java)
 
   </details>
 
