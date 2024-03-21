@@ -1243,45 +1243,50 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>JVM Constants API (JEP-334)</summary>
 
-   > 
-   > 
-   >
+   > A new package `java.lang.constant`, a list of new classes and interfaces to model the key class-file and run-time 
+   > artifacts, for example, the [constant pool](https://docs.oracle.com/javase/specs/jvms/se10/html/jvms-4.html#jvms-4.4).
 
   </details>
 
   <details>
    <summary>One AArch64 Port, Not Two (JEP-340)</summary>
 
+   > Before Java 12, there are two different source code or ports for the 64-bit ARM architecture:
+   > * Oracle – `src/hotspot/cpu/arm`
+   > * Red Hat? – `src/hotspot/cpu/aarch64`
    > 
-   > 
-   >
+   > Java 12 removed the Oracle `src/hotspot/cpu/arm` port, and maintain only one port `src/hotspot/cpu/aarch64`, 
+   > and make this `aarch64` the default build for the 64-bit ARM architecture.
 
   </details>
 
   <details>
    <summary>Default CDS Archives (JEP-341)</summary>
 
+   > The Class Data Sharing (CDS) improved the start-up time by reuse an existing archive file.
    > 
-   > 
+   > Before Java 12, we need to use `-Xshare:dump` to generate the CDS archive file for the JDK classes. 
    >
+   > In Java 12, there is a new `classes.jsa` file in the `/bin/server/` directory, a default CDS archive file for the JDK classes.
 
   </details>
 
   <details>
    <summary>Abortable Mixed Collections for G1 (JEP-344)</summary>
 
-   > 
-   > 
+   > This JEP improves the performance of the Garbage-first (G1) collector, by splits the problematic collection set into two parts – mandatory and optional. 
    >
+   >The G1 will abort the optional part if lack of time to handle it.
 
   </details>
 
   <details>
    <summary>Promptly Return Unused Committed Memory from G1 (JEP-346)</summary>
 
-   > 
-   > 
+   > This JEP improves the performance of the Garbage-first (G1) collector. 
    >
+   > If the application is low of the activity or idle, G1 periodically trigger a concurrent cycle to determine overall Java heap usage and return unused 
+   > Java heap memory to the operating system.
 
   </details>
 
