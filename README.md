@@ -1321,9 +1321,12 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Compact Number Formatting</summary>
 
+   > Java 12 introduces compact formatting where we can format long numbers for decimal, currency or percentages to short form or long form. 
+   > For example 1000 to 1K.
    > 
-   > 
+   > We can get its instance via the `getCompactNumberInstance` method in `NumberFormat` class.
    >
+   > [Example](src/main/java/co/com/mrsoft/test/java12/Example4.java)
 
   </details>
 
