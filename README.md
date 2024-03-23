@@ -1333,9 +1333,14 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Teeing Collector in Stream API</summary>
 
-   > 
-   > 
+   > Java 12 introduced a new static method to 'Collectors' interface which can perform two different operations on collection and then merge the result:
+   >  - **Collectors.teeing(Collector downstream1, Collector downstream2, BiFunction merger)**
+   >    * Each element of the collection passed to the teeing collector is processed by `downstream1` and `downstream2` collectors, 
+   >      once the processing is completed by both the collectors, the results are passed to the `BiFunction` collector to merge 
+   >      the result or process accordingly. It is similar to calling two functions on a collection and then calling the 
+   >      third function to process the results of first two functions.
    >
+   > [Example](src/main/java/co/com/mrsoft/test/java12/Example5.java)
 
   </details>
 
