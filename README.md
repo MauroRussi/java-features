@@ -1293,8 +1293,16 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>String API Updates</summary>
 
-   > Java 12 introduced multiple enhancements to String.
-   > 
+   > Java 12 introduced multiple enhancements to String:
+   >  - **String.indent()**
+   >    * Adjust the indention of each line of string based on argument passed.
+   >  - **String.transform()**
+   >    * It applies an arbitrary function to a String and returns the function's return value
+   >  - **String.describeConstable()**
+   >    * It returns Optional Object containing description of String instance.
+   >  - **String.resolveConstantDesc()**
+   >    * Returns descriptor instance string of given string.
+   >
    > [Example](src/main/java/co/com/mrsoft/test/java12/Example2.java)
 
   </details>
@@ -1302,9 +1310,11 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Files API Updates</summary>
 
+   > Java 12 introduced multiple enhancements to Files:
+   >  - **Files.mismatch()**
+   >    * It provides an easy way to compare two files.
    > 
-   > 
-   >
+   > [Example](src/main/java/co/com/mrsoft/test/java12/Example3.java)
 
   </details>
 
