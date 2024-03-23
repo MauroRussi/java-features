@@ -1344,6 +1344,108 @@ Project to do some Java practices and summarize the new features per Java versio
 
   </details>
 
+## Java 13
+  #### Feature release / Class file version 57 / Release date 17th September 2019
+
+  <details>
+   <summary>Dynamic CDS Archives (JEP-350)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>ZGC: Uncommit Unused Memory (JEP-351)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Reimplement the Legacy Socket API (JEP-353)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Switch Expressions (Preview) (JEP-354)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Text Blocks (Preview) (JEP-355)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>String API Updates</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>FileSystems API updates</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>DOM/SAX Factories</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>Dynamic CDS Archive</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
 
 ## Links for reference
 ### Java 8
@@ -1380,6 +1482,13 @@ Project to do some Java practices and summarize the new features per Java versio
  * https://www.tutorialspoint.com/java12/java12_overview.htm
  * https://www.baeldung.com/java-12-new-features
  * https://www.digitalocean.com/community/tutorials/java-12-features
+
+### Java 13
+ * https://www.happycoders.eu/java/java-13-features/
+ * https://mkyong.com/java/what-is-new-in-java-13/
+ * https://www.tutorialspoint.com/java13/java13_overview.htm
+ * https://www.baeldung.com/java-13-new-features
+ * https://www.digitalocean.com/community/tutorials/java-13-features
 
 ### Java 17
  * https://mkyong.com/java/what-is-new-in-java-17/
