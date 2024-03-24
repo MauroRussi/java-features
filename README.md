@@ -1424,11 +1424,10 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Switch Expressions (Preview) (JEP-354)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > Java 12 introduced JEP 325 Switch expressions. This JEP dropped `break` value in favor of `yield` keyword to 
+   > return a value from switch expressions.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example2.java)
 
   </details>
 
