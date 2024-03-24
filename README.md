@@ -1434,11 +1434,24 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Text Blocks (Preview) (JEP-355)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > Before Java 13, to define a multiline string, we used to use escape sequences for line breaks 
+   > and double quotes contained in the string.
+   > ```java
+   > String sql =
+   >      "SELECT id, firstName, lastName FROM Employee\n"
+   >          + "WHERE departmentId = \"IT\"\n"
+   >          + "ORDER BY lastName, firstName";
+   > ```
+   >
+   > This JEP introduces a multi-line string literal, a text block.
+   > ```java
+   > String sql = """
+   >      SELECT id, firstName, lastName FROM Employee
+   >      WHERE departmentId = "IT"
+   >      ORDER BY lastName, firstName""";
+   > ```
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example3.java)
 
   </details>
 
