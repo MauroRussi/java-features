@@ -583,14 +583,14 @@ Project to do some Java practices and summarize the new features per Java versio
    >
    > Let’s log messages tagged with ‘gc’ tag using ‘debug’ level to a file called ‘gc.txt’ with no decorations:
    >   ```bash
-   >   java -Xlog:gc=debug:file=gc.txt:none ...
+   >   $ java -Xlog:gc=debug:file=gc.txt:none ...
    >   ```
    > 
    > -Xlog:help will output possible options and examples.
    >
    > Logging configuration can be modified runtime using `jcmd` command. We are going to set GC logs to info and redirect them to a file – gc_logs:
    >   ```bash
-   >   jcmd 9615 VM.log output=gc_logs what=gc
+   >   $ jcmd 9615 VM.log output=gc_logs what=gc
    >   ```
    >
   </details>
@@ -663,7 +663,7 @@ Project to do some Java practices and summarize the new features per Java versio
    >
    > Number of threads can be controlled using following option.
    > ```bash
-   > >java -XX:ParallelGCThreads=4
+   > $ java -XX:ParallelGCThreads=4
    > ```
 
   </details>
@@ -685,19 +685,19 @@ Project to do some Java practices and summarize the new features per Java versio
    >
    >      Create a list `welcome.lst` of a class `Greeting.java` lying in `welcome.jar` using Java Launcher.
    >      ```bash
-   >      > java -Xshare:off -XX:+UseAppCDS -XX:DumpLoadedClassList=welcome.lst -cp welcome.jar Greeting
+   >      $ java -Xshare:off -XX:+UseAppCDS -XX:DumpLoadedClassList=welcome.lst -cp welcome.jar Greeting
    >      ```
    >  - **Create AppCDS archive**
    >
    >      Archive a list of classes to be used for Application class data sharing into a `welcome.jsa` file.
    >      ```bash
-   >      > java -Xshare:dump -XX:+UseAppCDS -XX:SharedClassListFile=welcome.lst -XX:SharedArchiveFile=welcome.jsa -cp welcome.jar
+   >      $ java -Xshare:dump -XX:+UseAppCDS -XX:SharedClassListFile=welcome.lst -XX:SharedArchiveFile=welcome.jsa -cp welcome.jar
    >      ```
    >  - **Use AppCDS archive**
    >
    >      Use AppCDS archive while using java launcher.
    >      ```bash
-   >      > java -Xshare:on -XX:+UseAppCDS -XX:SharedArchiveFile=welcome.jsa -cp welcome.jar Greeting
+   >      $ java -Xshare:on -XX:+UseAppCDS -XX:SharedArchiveFile=welcome.jsa -cp welcome.jar Greeting
    >      ```
 
   </details>
@@ -742,7 +742,7 @@ Project to do some Java practices and summarize the new features per Java versio
    >
    > User need to pass a path to the file system using a new option `-XX:AllocateHeapAt`.
    > ```bash
-   > >-XX:AllocateHeapAt=~/etc/heap
+   > -XX:AllocateHeapAt=~/etc/heap
    > ```
    > This option takes file path and do a memory mapping to achieve the desired result.
 
@@ -760,7 +760,7 @@ Project to do some Java practices and summarize the new features per Java versio
    >
    > We can enable Graal to test and debug the experimental JVM compiler.
    > ```bash
-   > java -XX:+UnlockExperimentalVMOptions -XX:+UseJVMCICompiler
+   > $ java -XX:+UnlockExperimentalVMOptions -XX:+UseJVMCICompiler
    > ```
    > As Graal is experimental and is subject to testing effort considering various Hotspots and jdk tests with various flag options. It may fail some benchmarks for performance as compared to standard JIT Ahead of Time compilers.
 
@@ -1073,7 +1073,7 @@ Project to do some Java practices and summarize the new features per Java versio
    >
    > The below command starts a 60 seconds JFR recording on a Java application, dumps the recorded data into a `.jfr` file:
    > ```bash
-   > > java -XX:StartFlightRecording=duration=60s,settings=profile,filename=app.jfr MyHelloWorldApp
+   > $ java -XX:StartFlightRecording=duration=60s,settings=profile,filename=app.jfr MyHelloWorldApp
    > ```
    > You can use Java Mission Control (JMC) to analyze and visualize the `.jfr` file.
 
@@ -1103,12 +1103,12 @@ Project to do some Java practices and summarize the new features per Java versio
    >
    > Before Java 11:
    > ```bash
-   > > javac HelloJava.java
-   > > java HelloJava
+   > $ javac HelloJava.java
+   > $ java HelloJava
    > ```
    > Now Java 11:
    > ```bash
-   > > java HelloJava.java
+   > $ java HelloJava.java
    > ```
 
   </details>
@@ -1350,33 +1350,74 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Dynamic CDS Archives (JEP-350)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > The Class Data Sharing (CDS) improves startup performance by creating a class-data archive once and 
+   > reusing it so that the JVM needs not to recreate it again. Java 10 introduced JEP 310 Application Class-Data Sharing.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > This JEP simplifying the process of creating CDS archives.
+   >
+   > This command creates a CDS archive file of a .jar:
+   > ```bash
+   > $ java -XX:ArchiveClassesAtExit=hello.jsa -cp hello.jar Hello
+   > ```
+   >
+   > This command runs a .jar with an existing CDS archive:
+   > ```bash
+   > $ java -XX:ArchiveClassesAtExit=hello.jsa -cp hello.jar Hello
+   > ```
 
   </details>
 
   <details>
    <summary>ZGC: Uncommit Unused Memory (JEP-351)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > Java 11 introduced the JEP 333: Z Garbage Collector (Experimental); it provides a short pause times 
+   > when cleaning up heap memories. 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > However, it didn’t return unused heap memory to the operating system, even when it was unused for a long time.
+   >
+   > This JEP enhanced the ZGC by returning unused heap memory to the operating system.
 
   </details>
 
   <details>
    <summary>Reimplement the Legacy Socket API (JEP-353)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > The underlying implementations of `java.net.Socket` and `java.net.ServerSocket` are ancient, dating back to JDK 1.0, 
+   > a mix of legacy Java and C code that is hard to maintain and debug.
+   >
+   > This JEP introduces new underlying implementations for the Socket APIs, which is the default implementation in Java 13.
+   > 
+   > Before Java 13, it uses the `PlainSocketImpl` for the `SocketImpl`. Java 13 introduced a new `NioSocketImpl` class 
+   > as a drop-in replacement for `PlainSocketImpl`.
+   >
+   > However, if something goes wrong, we can still switch back to the old implementation `PlainSocketImpl` by setting 
+   > `jdk.net.usePlainSocketImpl` system property.
    > 
    > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > 
+   > Run the sample using launch single-file source-code programs without compilation feature and notice 
+   > the `NioSocketImpl` class loaded:
+   > ```bash
+   > $ java -XX:+TraceClassLoading src/main/java/co/com/mrsoft/test/java13/Example1.java | grep SocketImpl
+   > [0.040s][info   ][class,load] java.net.SocketImpl source: jrt:/java.base
+   > [0.044s][info   ][class,load] java.net.SocketImpl$$Lambda$1/0x0000000800ba0840 source: java.net.SocketImpl
+   > [0.047s][info   ][class,load] sun.net.PlatformSocketImpl source: jrt:/java.base
+   > [0.047s][info   ][class,load] sun.nio.ch.NioSocketImpl source: jrt:/java.base
+   > [0.054s][info   ][class,load] sun.nio.ch.NioSocketImpl$FileDescriptorCloser source: jrt:/java.base
+   > ```
+   > 
+   > Run the sample switching back to `PlainSocketImpl` by setting the Djdk.net.usePlainSocketImpl system property. 
+   > ```bash
+   > $ java -XX:+TraceClassLoading -Djdk.net.usePlainSocketImpl src/main/java/co/com/mrsoft/test/java13/Example1.java | grep SocketImpl
+   > [0.041s][info   ][class,load] java.net.SocketImpl source: jrt:/java.base
+   > [0.045s][info   ][class,load] java.net.SocketImpl$$Lambda$1/0x0000000800ba0840 source: java.net.SocketImpl
+   > [0.048s][info   ][class,load] sun.net.PlatformSocketImpl source: jrt:/java.base
+   > [0.048s][info   ][class,load] java.net.AbstractPlainSocketImpl source: jrt:/java.base
+   > [0.048s][info   ][class,load] java.net.PlainSocketImpl source: jrt:/java.base
+   > [0.048s][info   ][class,load] java.net.AbstractPlainSocketImpl$1 source: jrt:/java.base
+   > ```
+   >
+   > Note: If `-XX:+TraceClassLoading` is not working use `-verbose:class`.
 
   </details>
 
