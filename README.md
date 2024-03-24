@@ -1458,11 +1458,15 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>String API Updates</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > `java.lang.String` has three new methods to manipulate text blocks:
+   >  - **String.stripIndent()**
+   >    * Mimics the compiler to remove incidental white space from the start and end of string.
+   >  - **String.translateEscapes()**
+   >    * Translates escape sequences such as “\\t” to “\t”.
+   >  - **String.formatted()**
+   >    * Works the same as String::format, but for text blocks.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example4.java)
 
   </details>  
 
