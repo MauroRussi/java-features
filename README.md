@@ -1497,7 +1497,7 @@ Project to do some Java practices and summarize the new features per Java versio
   #### Feature release / Class file version 58 / Release date 17th March 2020
 
   <details>
-   <summary>ASDFG</summary>
+   <summary>Pattern Matching for instanceof (Preview) (JEP-305)</summary>
 
    > asdfg:
    >  - **asdfg**
@@ -1507,6 +1507,170 @@ Project to do some Java practices and summarize the new features per Java versio
 
   </details>  
 
+  <details>
+   <summary>Packaging Tool (JEP-343)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>NUMA-Aware Memory Allocation for G1 (JEP-345)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>JFR Event Streaming (JEP-349)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>Non-Volatile Mapped Byte Buffers (JEP-352)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>Helpful NullPointerExceptions (JEP-358)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>Records (Preview) (JEP-359)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>Switch Expressions (Standard) (JEP-361)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>Deprecate the Solaris and SPARC Ports (JEP-362)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>Remove the Concurrent Mark Sweep (CMS) Garbage Collector (JEP-363)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>ZGC on macOS (Experimental) (JEP-364)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>ZGC on Windows (Experimental) (JEP-365)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>Deprecate the ParallelScavenge + SerialOld GC Combination (JEP-366)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>Remove the Pack200 Tools and API (JEP-367)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>Text Blocks (Second Preview) (JEP-368)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
+
+  <details>
+   <summary>Foreign-Memory Access API (Incubator) (JEP-370)</summary>
+
+   > asdfg:
+   >  - **asdfg**
+   >    * asdfg
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+
+  </details>  
 
 ## Links for reference
 ### Java 8
@@ -1550,6 +1714,13 @@ Project to do some Java practices and summarize the new features per Java versio
  * https://www.tutorialspoint.com/java13/java13_overview.htm
  * https://www.baeldung.com/java-13-new-features
  * https://www.digitalocean.com/community/tutorials/java-13-features
+
+### Java 14
+ * https://www.happycoders.eu/java/java-14-features/
+ * https://mkyong.com/java/what-is-new-in-java-14/
+ * https://www.tutorialspoint.com/java14/java14_overview.htm
+ * https://www.baeldung.com/java-14-new-features
+ * https://www.digitalocean.com/community/tutorials/java-14-features
 
 ### Java 17
  * https://mkyong.com/java/what-is-new-in-java-17/
