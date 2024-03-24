@@ -1473,27 +1473,31 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>FileSystems API updates</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > New methods have been added to the `FileSystems` class:
+   >  - **FileSystems.newFileSystem()**
+   >    * These are 3 different overloaded methods that make it easier to use file system providers, 
+   >      which treats the contents of a file as a file system.
 
   </details>  
 
   <details>
    <summary>DOM/SAX Factories</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > There are new methods to instantiate DOM and SAX factories with Namespace support.
+   >  - **DocumentBuilderFactory.newDefaultNSInstance()**
+   >    * It creates a new NamespaceAware instance of a DocumentBuilderFactory builtin system-default implementation.
+   >  - **DocumentBuilderFactory.newNSInstance()**
+   >    * It creates a new NamespaceAware instance of a DocumentBuilderFactory.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java13/Example5.java)
 
   </details>  
 
+## Java 14
+  #### Feature release / Class file version 58 / Release date 17th March 2020
+
   <details>
-   <summary>Dynamic CDS Archive</summary>
+   <summary>ASDFG</summary>
 
    > asdfg:
    >  - **asdfg**
