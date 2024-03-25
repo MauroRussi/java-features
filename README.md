@@ -1499,11 +1499,12 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Pattern Matching for instanceof (Preview) (JEP-305)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > Before Java 14, we use `instanceof` and cast to check the object’s type and cast to a variable.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > Now in Java 14, you don't need to do the cast. Cast and assignment are part of `instanceof` expression.
+   > This is also known as pattern variable.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java14/Example1.java)
 
   </details>  
 
