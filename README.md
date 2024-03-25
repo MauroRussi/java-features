@@ -1140,6 +1140,8 @@ Project to do some Java practices and summarize the new features per Java versio
    > The Z Garbage Collector (ZGC) is an experimental garbage collector; it has low pause times not exceed 10ms. 
    > 
    > This ZCG support only on Linux/64.
+   >
+   > This ZGC garbage collector is a product feature in Java 15.
 
   </details>
 
@@ -1156,6 +1158,8 @@ Project to do some Java practices and summarize the new features per Java versio
 
    > This JEP deprecates the `pack200` and `unpack200` tools, and the `Pack200` API in `java.util.jar` package, 
    > and it will probably remove in the future release.
+   >
+   > Java 14 removed the Pack200 Tools and APIs.
 
   </details>
 
@@ -1218,6 +1222,8 @@ Project to do some Java practices and summarize the new features per Java versio
    > ```bash
    > -XX:+UnlockExperimentalVMOptions -XX:+UseShenandoahGC
    > ```
+   >
+   > This Shenandoah GC became a product feature in Java 15.
 
   </details>
 
@@ -1235,6 +1241,8 @@ Project to do some Java practices and summarize the new features per Java versio
 
    > This feature enhanced the existing `switch` statements (returns nothing) to support 
    > `switch` expressions (returns something).
+   >
+   > Switch expressions become a standard feature in Java 14.
    > 
    > [Example](src/main/java/co/com/mrsoft/test/java12/Example1.java)
 
@@ -1426,6 +1434,8 @@ Project to do some Java practices and summarize the new features per Java versio
 
    > Java 12 introduced JEP 325 Switch expressions. This JEP dropped `break` value in favor of `yield` keyword to 
    > return a value from switch expressions.
+   >
+   > This switch expression becomes a standard feature in Java 14.
    > 
    > [Example](src/main/java/co/com/mrsoft/test/java13/Example2.java)
 
@@ -1451,6 +1461,8 @@ Project to do some Java practices and summarize the new features per Java versio
    >      ORDER BY lastName, firstName""";
    > ```
    > 
+   > This text blocks is a permanent feature in Java 15.
+   >
    > [Example](src/main/java/co/com/mrsoft/test/java13/Example3.java)
 
   </details>
@@ -1503,6 +1515,8 @@ Project to do some Java practices and summarize the new features per Java versio
    > 
    > Now in Java 14, you don't need to do the cast. Cast and assignment are part of `instanceof` expression.
    > This is also known as pattern variable.
+   >
+   > This becomes a standard feature in Java 16.
    > 
    > [Example](src/main/java/co/com/mrsoft/test/java14/Example1.java)
 
@@ -1511,22 +1525,21 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Packaging Tool (JEP-343)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > New jpackage tool to package a Java application into a platform-specific package like:
+   > - Linux: deb and rpm
+   > - macOS: pkg and dmg
+   > - Windows: msi and exe
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > This packaging tool is a standard feature in Java 16.
 
   </details>  
 
   <details>
    <summary>NUMA-Aware Memory Allocation for G1 (JEP-345)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > New NUMA-aware memory allocation mode, improves the G1 performance on large machines. 
+   >
+   > Add `+XX:+UseNUMA` option to enable it.
 
   </details>  
 
