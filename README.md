@@ -1546,33 +1546,52 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>JFR Event Streaming (JEP-349)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > The JDK Flight Recorder (JFR) is a tool for collecting diagnostic and profiling data about a running 
+   > Java application. 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > Normally, we start a recording, stop it, dump the recorded events to disk for parsing, it works well 
+   > for profiling, analysis, or debugging.
+   >
+   > The package `jdk.jfr.consumer`, in module `jdk.jfr`, is enhanced to subscribe to events asynchronously.
 
   </details>  
 
   <details>
    <summary>Non-Volatile Mapped Byte Buffers (JEP-352)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > Improved FileChannel API to create MappedByteBuffer that access to non-volatile memory (NVM) 
+   > – a memory that can retrieve stored data even after having been power cycled. For example, 
+   > this feature ensures that any changes which might still be in the cache are written back to memory.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > P.S Only Linux/x64 and Linux/AArch64 OS support this!
 
   </details>  
 
   <details>
    <summary>Helpful NullPointerExceptions (JEP-358)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > Improved the description of `NullPointerExceptions` by telling which variable was null. 
+   > Add `-XX:+ShowCodeDetailsInExceptionMessages` option to enable this feature.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java14/Example2.java)
+   >
+   > Running the example before Java 14:
+   > ```bash
+   > $ java src/main/java/co/com/mrsoft/test/java14/Example2.java
+   > 
+   > Exception in thread "main" java.lang.NullPointerException
+	 >        at co.com.mrsoft.test.java14.Example2.showUpperCase(Example.java:18)
+	 >        at co.com.mrsoft.test.java14.Example2.main(Example.java:13)
+   > ```
+   > 
+   > Java 14 with `-XX:+ShowCodeDetailsInExceptionMessages` option enabled:
+   > ```bash
+   > $ java -XX:+ShowCodeDetailsInExceptionMessages src/main/java/co/com/mrsoft/test/java14/Example2.java
+   > 
+   > Exception in thread "main" java.lang.NullPointerException:
+   >    Cannot invoke "String.toUpperCase(java.util.Locale)" because "<parameter1>" is null
+	 >         at co.com.mrsoft.test.java14.Example2.showUpperCase(Example.java:18)
+	 >         at co.com.mrsoft.test.java14.Example2.main(Example.java:13)
 
   </details>  
 
