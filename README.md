@@ -988,7 +988,7 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
   <details>
-   <summary>Epsilon, A No-Op Garbage Collector (JEP-318)</summary>
+   <summary>Epsilon, A No-Op Garbage Collector (Experimental) (JEP-318)</summary>
 
    > A new No-Op (no operations) Garbage Collector, it allocates memory but will not collect any garbage (memory allocation), once the Java heap is exhausted, the JVM will shut down.
    >
@@ -1027,7 +1027,7 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
   <details>
-   <summary>HTTP Client API standardized (JEP-321)</summary>
+   <summary>HTTP Client API (Standard) (JEP-321)</summary>
 
    > This `HTTP Client API`, in the `java.net.http` package was introduced in Java 9, updated in Java 10, now a standard feature in Java 11.
    > 
@@ -1135,7 +1135,7 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
   <details>
-   <summary>ZGC A Scalable Low-Latency Garbage Collector (JEP-333)</summary>
+   <summary>ZGC A Scalable Low-Latency Garbage Collector (Experimental) (JEP-333)</summary>
 
    > The Z Garbage Collector (ZGC) is an experimental garbage collector; it has low pause times not exceed 10ms. 
    > 
@@ -1213,7 +1213,7 @@ Project to do some Java practices and summarize the new features per Java versio
   #### Feature release / Class file version 56 / Release date 19th March 2019
 
   <details>
-   <summary>Shenandoah: A Low-Pause-Time Garbage Collector (JEP-189)</summary>
+   <summary>Shenandoah: A Low-Pause-Time Garbage Collector (Experimental) (JEP-189)</summary>
 
    > Shenandoah is a new low-pause and concurrent garbage collector, it reduces GC pause time and independent of the 
    > Java heap size (5M or 5G of heap size have the same pause time, useful for large heap applications.)
@@ -1237,7 +1237,7 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>
 
   <details>
-   <summary>Switch Expressions (JEP-325)</summary>
+   <summary>Switch Expressions (Preview) (JEP-325)</summary>
 
    > This feature enhanced the existing `switch` statements (returns nothing) to support 
    > `switch` expressions (returns something).
@@ -1523,7 +1523,7 @@ Project to do some Java practices and summarize the new features per Java versio
   </details>  
 
   <details>
-   <summary>Packaging Tool (JEP-343)</summary>
+   <summary>Packaging Tool (Incubator) (JEP-343)</summary>
 
    > New jpackage tool to package a Java application into a platform-specific package like:
    > - Linux: deb and rpm
@@ -1707,13 +1707,46 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Foreign-Memory Access API (Incubator) (JEP-370)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > Java 14 now allows java programs to safely and efficiently access foreign memory outside of the Java heap. 
+   > Earlier mapDB, memcached java libraries provided the foreign memory access. 
+   >
+   > This JEP aims to provide a cleaner API to operate on all types of foreign memories(native memory, persistent memory, managed heap memory etc. ) 
+   > in a seamless way. 
+   >
+   > This JEP takes care of safety of JVM regardless of foreign memory type. Garbage collection/Memory deallocation operations should be explicitly 
+   > mentioned as well.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
-
-  </details>  
+   > This API is based on three main abstractions MemorySegment, MemoryAddress and MemoryLayout and is a safe way to access both heap as well as 
+   > non-heap memory.
+   > ```java
+   > import jdk.incubator.foreign.*;
+   > import java.lang.invoke.VarHandle;
+   > import java.nio.ByteOrder;
+   > 
+   > public class Test {
+   >     public static void main(String[] args) {
+   >       // You need to add the module jdk.incubator.foreign 
+   > 	     VarHandle intHandle = MemoryHandles.varHandle(int.class, ByteOrder.nativeOrder());
+   > 
+   >         try (MemorySegment segment = MemorySegment.allocateNative(1024)) {
+   >             MemoryAddress base = segment.baseAddress();
+   > 
+   >             // print memory address
+   >             System.out.println(base);                 
+   > 
+   >             // set value 999 into the foreign memory
+   > 	          intHandle.set(base, 999);                 
+   > 
+   >             // get the value from foreign memory
+   >             System.out.println(intHandle.get(base));  
+   >         }
+   >     }
+   > }
+   > ```
+   > Java 15 has the second Incubator.
+   >
+   > Java 16 has the third Incubator.
+  </details>
 
 ## Links for reference
 ### Java 8
