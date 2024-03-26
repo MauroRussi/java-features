@@ -1580,8 +1580,8 @@ Project to do some Java practices and summarize the new features per Java versio
    > $ java src/main/java/co/com/mrsoft/test/java14/Example2.java
    > 
    > Exception in thread "main" java.lang.NullPointerException
-	 >        at co.com.mrsoft.test.java14.Example2.showUpperCase(Example.java:18)
-	 >        at co.com.mrsoft.test.java14.Example2.main(Example.java:13)
+	 >        at co.com.mrsoft.test.java14.Example2.showUpperCase(Example2.java:18)
+	 >        at co.com.mrsoft.test.java14.Example2.main(Example2.java:13)
    > ```
    > 
    > Java 14 with `-XX:+ShowCodeDetailsInExceptionMessages` option enabled:
@@ -1590,19 +1590,34 @@ Project to do some Java practices and summarize the new features per Java versio
    > 
    > Exception in thread "main" java.lang.NullPointerException:
    >    Cannot invoke "String.toUpperCase(java.util.Locale)" because "<parameter1>" is null
-	 >         at co.com.mrsoft.test.java14.Example2.showUpperCase(Example.java:18)
-	 >         at co.com.mrsoft.test.java14.Example2.main(Example.java:13)
+	 >         at co.com.mrsoft.test.java14.Example2.showUpperCase(Example2.java:18)
+	 >         at co.com.mrsoft.test.java14.Example2.main(Example2.java:13)
 
   </details>  
 
   <details>
    <summary>Records (Preview) (JEP-359)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > Records were introduced to reduce repetitive boilerplate code in data model POJOs. They simplify day to day development, 
+   > improve efficiency and greatly minimize the risk of human error.
+   >
+   > For example, a data model for a User with an id and password can be simply defined as:
+   > ```java
+   > public record User(int id, String password) { };
+   > ```
+   > As we can see with record User, there is a new keyword `record` here. This simple declaration will automatically add:
+   >  - Constructor
+   >  - Setter
+   >  - Getter
+   >  - equals
+   >  - hashcode
+   >  - toString
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > Additionally, a record is a final class, not abstract, and all of its fields are final as well.
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java14/Example3.java)
+   >
+   > Record or data class is a standard feature in Java 16.
 
   </details>  
 
