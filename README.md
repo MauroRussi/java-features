@@ -1766,14 +1766,19 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Sealed Classes (Preview) (JEP-360)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
+   > Java 15 introduces a sealed classes as preview feature which provides a fine grained control over inheritance. 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > Following are salient points to consider for a sealed class:   
+   >  - Sealed class is declared using `sealed` keyword.
+   >  - Sealed classes allow to declare which class can be a subtype using `permits` keyword.
+   >  - A class extending sealed class must be declared as either `sealed`, `non-sealed` or `final`.
+   >  - Sealed classes helps in creating a finite and determinable hiearchy of classes in inheritance.
+   > 
+   >  For a not permitted class, it throws compile-time errors.
+   >
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example2.java)
 
-  </details>    
-
+  </details>
 
   <details>
    <summary>Hidden Classes (JEP-371)</summary>
