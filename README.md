@@ -1983,45 +1983,46 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Vector API (Incubator) (JEP-338)</summary>
 
-   > asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > The idea of this API is to provide a means of vector computations that will ultimately 
+   > be able to perform more optimally (on supporting CPU architectures) than the traditional 
+   > scalar method of computations.
 
   </details>
 
   <details>
    <summary>Enable C++14 Language Features (JEP-347)</summary>
 
-   > asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > This JEP allows the C++ 14 features to be used in the C++ source code within the JDK.
 
   </details>   
 
   <details>
    <summary>Migrate from Mercurial to Git (JEP-357)</summary>
 
-   > asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > This JEP migrate the OpenJDK source code from Mercurial to Git or GitHub, relates to the below JEP-369.
+   >
+   > The reasons for migrating to Git:
+   >  - File size of version control system metadata (Mercurial) is too big.
+   >  - Available tooling
+   >  - Available hosting
 
   </details>   
 
   <details>
    <summary>Migrate to GitHub (JEP-369)</summary>
 
-   > asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > This JEP joins the above JEP-357, migrate the OpenJDK source code 
+   > from Mercurial to [GitHub](https://github.com/openjdk/).
 
   </details>   
 
   <details>
    <summary>ZGC: Concurrent Thread-Stack Processing (JEP-376)</summary>
 
-   > asdf
+   > This JEP improves the Z Garbage Collector (ZGC) by moving the ZGC thread-stack processing 
+   > from safepoints to a concurrent phase.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > In Java 15 ZGC becomes a product feature.
 
   </details>   
 
