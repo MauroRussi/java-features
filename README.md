@@ -2029,45 +2029,52 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Unix-Domain Socket Channels (JEP-380)</summary>
 
-   > asdf
+   > The Unix-domain sockets are used for inter-process communication (IPC) on the same host, 
+   > which means exchanging data between processes executing on the same host. 
+   > The Unix-domain sockets are similar to TCP/IP sockets except that they are addressed by 
+   > filesystem pathnames rather than the Internet Protocol (IP) addresses and port numbers. 
+   > Most Unix platforms, Windows 10 and Windows Server 2019, also supported the Unix-domain sockets.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > This JEP add Unix-domain (AF_UNIX) socket support to the existing `SocketChannel` and `ServerSocketChannel`.
+   > 
+   > New Unix-domain Socket classes or APIs:
+   >  - New socket address class `java.net.UnixDomainSocketAddress`
+   >  - New enum `java.net.StandardProtocolFamily.UNIX`
 
   </details>   
 
   <details>
    <summary>Alpine Linux Port (JEP-386)</summary>
 
-   > asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > This JEP port the JDK to Alpine Linux and other Linux distributions that use `musl` implementation. 
+   > This JDK port enables Java to run out-of-the-box in Alpine Linux, which benefits those Java-dependent 
+   > frameworks or tools like Tomcat and Spring.
 
   </details>   
 
   <details>
    <summary>Elastic Metaspace (JEP-387)</summary>
 
-   > asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > Java 8 removed the PermGen (Permanent Generation), and introduced Metaspace, a native off-heap memory manager 
+   > in the hotspot.
+   >
+   > This JEP improves the metaspace memory management by returning unused HotSpot class-metadata or metaspace memory 
+   > to the operating system more promptly, reducing the metaspace footprint, and simplifying the metaspace code.
 
   </details>   
 
   <details>
    <summary>Windows/AArch64 Port (JEP-388)</summary>
 
-   > asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > This JEP port the JDK to Windows/AArch64, running JDK + Windows on ARM hardware, server, or ARM-based laptop.
 
   </details>   
 
   <details>
    <summary>Foreign Linker API (Incubator) (JEP-389)</summary>
 
-   > asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > This JEP enables Java code to call or can be called by native code written in other languages 
+   > like `C` or `C++`, replace Java Native Interface (JNI).
 
   </details>   
 
