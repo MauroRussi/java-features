@@ -1783,50 +1783,66 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Hidden Classes (JEP-371)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
+   > Java 15 has introduced hidden classes which cannot be used directly by other classes bytecode. 
+   > These hidden classes are intended to be used by frameworks which genereate classes at runtime 
+   > and use them using reflection.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > This is the list of targetted goals of this enhancement:
+   >  - Frameworks should be able to define classes as non-discoverable implementation details of the framework, 
+   >    These classes cannot neither be linked to other classes nor discoverable using reflection.
+   >  - Extend Access Control Nest with non-discoverable classes.
+   >  - Aggressive unloading of hidden classes which will help frameworks to define as many as hidden classes as 
+   >    required without degrading the performance.
+   >  - Deprecate the non-standard API, `misc.Unsafe::defineAnonymousClass`, to be removed in future release.
 
-  </details>    
-
+  </details>
 
   <details>
    <summary>Remove the Nashorn JavaScript Engine (JEP-372)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
+   > Java 8 introduced Nashorn as a replacement for the Rhino Javascript engine.
+   > Java 11 deprecated the Nashorn JavaScript Engine and `jjs` tool.
+   > Now, Java 15 removed the Nashorn JavaScript Engine and `jjs` tool permanently.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > This JEP also removed the below two modules:
+   >  - `jdk.scripting.nashorn` – contains the `jdk.nashorn.api.scripting` and `jdk.nashorn.api.tree` packages.
+   >  - `jdk.scripting.nashorn.shell` – contains the `jjs` tool.
 
   </details>    
-
 
   <details>
    <summary>Reimplement the Legacy DatagramSocket API (JEP-373)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > Java 13 reimplemented the legacy Socket APIs – `java.net.Socket` and `java.net.ServerSocket`.
+   > This time, Java 15 reimplemented the legacy DatagramSocket APIs – `java.net.DatagramSocket` and 
+   > `java.net.MulticastSocket`.
 
   </details>    
-
 
   <details>
    <summary>Disable and Deprecate Biased Locking (JEP-374)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
+   > This JEP disable and deprecated the biased locking by default.
+   >
+   > Before Java 15, the biased locking is always enabled by default, giving performance gains for synchronized stuff.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > The older or legacy Java application uses synchronize collections APIs like `Hashtable` and `Vector`, 
+   > and the biased locking may giving performance gains. 
+   > 
+   > Nowadays, the newer Java application generally uses the non-synchronized collections `HashMap` and `ArrayList`, 
+   > and the performance gains of biased locking are generally less useful now.
+   > 
+   > However, for Java 15, we still can enable the biased locking by using `-XX:+UseBiasedLocking`, 
+   > but it will prompt VM warning for deprecated API.
+   > 
+   > ```bash
+   > java -XX:+UseBiasedLocking name
+   > 
+   > OpenJDK 64-Bit Server VM warning: Option UseBiasedLocking was deprecated
+   > in version 15.0 and will likely be removed in a future release.
+   > ```
 
   </details>    
-
 
   <details>
    <summary>Pattern Matching for instanceof (Second Preview) (JEP-375)</summary>
