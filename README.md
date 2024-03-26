@@ -1968,7 +1968,14 @@ Project to do some Java practices and summarize the new features per Java versio
    >
    > This will not affect other parts of RMI.
 
-  </details>    
+  </details>
+
+  <details>
+   <summary>Helpful NullPointerExceptions</summary>
+
+   > Helpful NullPointerExceptions, introduced in Java 14, are enabled by default in Java 15 and later.
+
+  </details>
 
 ## Links for reference
 ### Java 8
