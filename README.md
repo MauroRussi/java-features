@@ -1624,11 +1624,12 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Switch Expressions (Standard) (JEP-361)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > The switch expression was a preview feature in Java 12 and Java 13; now it is officially JDK standard feature, 
+   > therefore we can: 
+   >  - We can use `yield` to return a value from a `switch`.
+   >  - We can also return a value via a label rules or arrows.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java14/Example4.java)
 
   </details>  
 
