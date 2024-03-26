@@ -1847,59 +1847,61 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Pattern Matching for instanceof (Second Preview) (JEP-375)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > Java 14 introduced Pattern Matching as a preview feature.
+   >
+   > This JEP is a second preview of the pattern matching to gain additional feedback, with no change to the API.
+   >  
+   >  The pattern matching is a standard feature in Java 16.
 
   </details>    
-
 
   <details>
    <summary>ZGC: A Scalable Low-Latency Garbage Collector (JEP-377)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
+   > Java 11 introduced the ZGC garbage collector as an experimental feature.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > This JEP fixed some bugs, added some features and enhancements, and now supported major platforms 
+   > like Linux/x86_64, Linux/aarch64, Windows, and macOS.
+   > 
+   > This JEP also changes the Z Garbage Collector from an experimental feature into a product feature. 
+   > However, the default garbage collector remains G1.
+   > 
+   > The below command enables the ZGC garbage collector.
+   > 
+   > ```bash
+   > $ java -XX:+UseZGC className
+   > ```
 
   </details>    
-
 
   <details>
    <summary>Text Blocks (JEP-378)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
+   > The multi-line string or text blocks is a permanent feature in Java 15.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java14/Example5.java)
 
   </details>    
-
 
   <details>
    <summary>Shenandoah: A Low-Pause-Time Garbage Collector (JEP-379)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
+   > Java 12 introduced the Shenandoah garbage collector as an experimental feature, 
+   > and now become a product feature in Java 15.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > The below command enables the Shenandoah garbage collector.
+   > 
+   > ```bash
+   > $ java -XX:+UseShenandoahGC className
+   > ```
 
-  </details>    
-
+  </details>
 
   <details>
    <summary>Remove the Solaris and SPARC Ports (JEP-381)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > Java 14 deprecated the Solaris/SPARC, Solaris/x64, and Linux/SPARC ports 
+   > and now it is officially removed in Java 15.
 
   </details>    
 
@@ -1907,35 +1909,64 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Foreign-Memory Access API (Second Incubator) (JEP-383)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
+   > Java 14 introduced a new Foreign-Memory Access API as an Incubator Modules. 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > This JEP made some changes to the APIs, and it will be still in incubator modules.
 
   </details>    
-
 
   <details>
    <summary>Records (Second Preview) (JEP-384)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
+   > Java 14 introduced the records as a preview feature. 
+   >
+   > This JEP enhanced the records with features like support sealed types, local records, 
+   > annotation on records, and Reflection APIs for records.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > **Records with sealed types**
+   > ```java
+   > // Sealed interface declaration with permits list of records.
+   > sealed interface Car permits BMW, Audi { ... }
+   > 
+   > // Record implementing sealed interface.
+   > record BMW(int price) implements Car { ... }
+   >
+   > // Record implementing sealer interface.
+   > record Audi(int price, String model) implements Car { ... }
+   > ```
+   > **Local Records**
+   > ```java
+   > List<Merchant> findTopMerchants(List<Merchant> merchants, int month) {
+   >     // Local record storing and object.
+   >     record MerchantSales(Merchant merchant, double sales) {}
+   > 
+   >     // Stream processing of objects and map into local records.
+   >     return merchants.stream()
+   >         .map(merchant -> new MerchantSales(merchant, computeSales(merchant, month)))
+   >         .sorted((m1, m2) -> Double.compare(m2.sales(), m1.sales()))
+   >         .map(MerchantSales::merchant)
+   >         .collect(toList());
+   > }
+   > ```
+   > **Annotation on records**
+   > ```java
+   > public record Game(@CustomAnno Rank rank) { ... }
+   > ```
+   > **Reflection API**
+   > The `java.lang.Class` added two public methods:
+   >  - `RecordComponent[] getRecordComponents()`
+   >  - `boolean isRecord()`
+   >
+   > The record is the standard feature in Java 16.
 
   </details>    
-
 
   <details>
    <summary>Deprecate RMI Activation for Removal (JEP-385)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+   > This JEP deprecated the obsolete RMI Activation mechanism. 
+   >
+   > This will not affect other parts of RMI.
 
   </details>    
 
