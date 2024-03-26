@@ -1636,77 +1636,71 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Deprecate the Solaris and SPARC Ports (JEP-362)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > Dropping support for Solaris/SPARC, Solaris/x64, and Linux/SPARC ports, fewer platforms support 
+   > means faster delivery for new features.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > Java 15 removed the above ports.
 
   </details>  
 
   <details>
    <summary>Remove the Concurrent Mark Sweep (CMS) Garbage Collector (JEP-363)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > Java 9 deprecated this Concurrent Mark Sweep (CMS) Garbage Collector, and now it is officially removed.
+   >  
+   > Next command is no longer supported
+   > ```bash
+   > $ java -XX:+UseConcMarkSweepGC Test
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > OpenJDK 64-Bit Server VM warning: Ignoring option UseConcMarkSweepGC; support was removed in 14.0
+   > ```
 
   </details>  
 
   <details>
    <summary>ZGC on macOS (Experimental) (JEP-364)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > Java 11 introduced the Z Garbage Collector (ZGC) on Linux, and now it ports to macOS.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > This ZGC is a product feature in Java 15.
 
   </details>  
 
   <details>
    <summary>ZGC on Windows (Experimental) (JEP-365)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > Java 11 introduced the Z Garbage Collector (ZGC) on Linux, and now it ports to Windows.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > This ZGC is a product feature in Java 15.
 
   </details>  
 
   <details>
    <summary>Deprecate the ParallelScavenge + SerialOld GC Combination (JEP-366)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > Due to less use and high maintenance effort, Java 14 deprecates the combination of the parallel young generation 
+   > and serial old generation GC algorithms.
 
   </details>  
 
   <details>
    <summary>Remove the Pack200 Tools and API (JEP-367)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > Java 11 deprecated the `pack200` and `unpack200` tools, and the `Pack200 API` in the `java.util.jar` package, 
+   > and now it is officially removed.
 
   </details>  
 
   <details>
    <summary>Text Blocks (Second Preview) (JEP-368)</summary>
 
-   > asdfg:
-   >  - **asdfg**
-   >    * asdfg
+   > The first preview appeared in Java 13, now added two more new escape sequences:
+   >  - `\<end-of-line>` suppresses the line termination.
+   >  - `\s` is translated into a single space.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java13/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java14/Example5.java)
+   >
+   > This text blocks is a permanent feature in Java 15.
 
   </details>  
 
