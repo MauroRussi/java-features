@@ -1748,6 +1748,175 @@ Project to do some Java practices and summarize the new features per Java versio
    > Java 16 has the third Incubator.
   </details>
 
+## Java 15
+  #### Feature release / Class file version 59 / Release date 16th September 2020
+
+  <details>
+   <summary>Edwards-Curve Digital Signature Algorithm (EdDSA) (JEP-339)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+  <details>
+   <summary>Sealed Classes (Preview) (JEP-360)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+
+  <details>
+   <summary>Hidden Classes (JEP-371)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+
+  <details>
+   <summary>Remove the Nashorn JavaScript Engine (JEP-372)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+
+  <details>
+   <summary>Reimplement the Legacy DatagramSocket API (JEP-373)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+
+  <details>
+   <summary>Disable and Deprecate Biased Locking (JEP-374)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+
+  <details>
+   <summary>Pattern Matching for instanceof (Second Preview) (JEP-375)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+
+  <details>
+   <summary>ZGC: A Scalable Low-Latency Garbage Collector (JEP-377)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+
+  <details>
+   <summary>Text Blocks (JEP-378)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+
+  <details>
+   <summary>Shenandoah: A Low-Pause-Time Garbage Collector (JEP-379)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+
+  <details>
+   <summary>Remove the Solaris and SPARC Ports (JEP-381)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+
+  <details>
+   <summary>Foreign-Memory Access API (Second Incubator) (JEP-383)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+
+  <details>
+   <summary>Records (Second Preview) (JEP-384)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
+
+  <details>
+   <summary>Records (Second Preview) (JEP-385)</summary>
+
+   > asdf
+   >  - **asdf**
+   >    * asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
+
+  </details>    
+
 ## Links for reference
 ### Java 8
  * https://mkyong.com/tutorials/java-8-tutorials/
@@ -1797,6 +1966,13 @@ Project to do some Java practices and summarize the new features per Java versio
  * https://www.tutorialspoint.com/java14/java14_overview.htm
  * https://www.baeldung.com/java-14-new-features
  * https://www.digitalocean.com/community/tutorials/java-14-features
+
+### Java 15
+ * https://www.happycoders.eu/java/java-15-features/
+ * https://mkyong.com/java/what-is-new-in-java-15/
+ * https://www.tutorialspoint.com/java15/java15_overview.htm
+ * https://www.baeldung.com/java-15-new
+ * https://www.digitalocean.com/community/tutorials/java-15-features
 
 ### Java 17
  * https://mkyong.com/java/what-is-new-in-java-17/
