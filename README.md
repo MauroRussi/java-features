@@ -1977,6 +1977,162 @@ Project to do some Java practices and summarize the new features per Java versio
 
   </details>
 
+## Java 16
+  #### Feature release / Class file version 60 / Release date 16th March 2021
+
+  <details>
+   <summary>Vector API (Incubator) (JEP-338)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>
+
+  <details>
+   <summary>Enable C++14 Language Features (JEP-347)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Migrate from Mercurial to Git (JEP-357)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Migrate to GitHub (JEP-369)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>ZGC: Concurrent Thread-Stack Processing (JEP-376)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Unix-Domain Socket Channels (JEP-380)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Alpine Linux Port (JEP-386)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Elastic Metaspace (JEP-387)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Windows/AArch64 Port (JEP-388)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Foreign Linker API (Incubator) (JEP-389)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Warnings for Value-Based Classes (JEP-390)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Packaging Tool (JEP-392)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Foreign-Memory Access API (Third Incubator) (JEP-393)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Pattern Matching for instanceof (JEP-394)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Records (JEP-395)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Strongly Encapsulate JDK Internals by Default (JEP-396)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
+  <details>
+   <summary>Sealed Classes (Second Preview) (JEP-397)</summary>
+
+   > asdf
+   > 
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+
+  </details>   
+
 ## Links for reference
 ### Java 8
  * https://mkyong.com/tutorials/java-8-tutorials/
@@ -2033,6 +2189,12 @@ Project to do some Java practices and summarize the new features per Java versio
  * https://www.tutorialspoint.com/java15/java15_overview.htm
  * https://www.baeldung.com/java-15-new
  * https://www.digitalocean.com/community/tutorials/java-15-features
+
+### Java 16
+ * https://www.happycoders.eu/java/java-16-features/
+ * https://mkyong.com/java/what-is-new-in-java-16/
+ * https://www.tutorialspoint.com/java16/java16_overview.htm
+ * https://www.baeldung.com/java-16-new-features
 
 ### Java 17
  * https://mkyong.com/java/what-is-new-in-java-17/
