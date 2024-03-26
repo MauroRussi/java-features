@@ -1754,9 +1754,10 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Edwards-Curve Digital Signature Algorithm (EdDSA) (JEP-339)</summary>
 
-   > asdf
-   >  - **asdf**
-   >    * asdf
+   > Cryptography related stuff, Java 15 implements an additional digital signature scheme using the Edwards-Curve Digital Signature Algorithm (EdDSA) as described by RFC 8032. 
+   >
+   > The EdDSA signature scheme is popular due to its improved security and performance (faster) over other signature schemes, and it is also one of the signatures schemes 
+   > that are allowed in TLS 1.3.
    > 
    > [Example](src/main/java/co/com/mrsoft/test/java15/Example1.java)
 
@@ -1907,7 +1908,7 @@ Project to do some Java practices and summarize the new features per Java versio
 
 
   <details>
-   <summary>Records (Second Preview) (JEP-385)</summary>
+   <summary>Deprecate RMI Activation for Removal (JEP-385)</summary>
 
    > asdf
    >  - **asdf**
