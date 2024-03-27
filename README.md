@@ -2182,6 +2182,135 @@ Project to do some Java practices and summarize the new features per Java versio
 
   </details>   
 
+## Java 17
+  #### Long term support version / Class file version 61 / Release date 14th September 2021
+
+  <details>
+   <summary>Restore Always-Strict Floating-Point Semantics (JEP-306)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>Enhanced Pseudo-Random Number Generators (JEP-356)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>New macOS Rendering Pipeline (JEP-382)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>macOS/AArch64 Port (JEP-391)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>Deprecate the Applet API for Removal (JEP-398)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>Strongly Encapsulate JDK Internals (JEP-403)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>Pattern Matching for switch (Preview) (JEP-406)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>Remove RMI Activation (JEP-407)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>Sealed Classes (JEP-409)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>Remove the Experimental AOT and JIT Compiler (JEP-410)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>Deprecate the Security Manager for Removal (JEP-411)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>Foreign Function & Memory API (Incubator) (JEP-412)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>Vector API (Second incubator) (JEP-414)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
+  <details>
+   <summary>Context-Specific Deserialization Filters (JEP-415)</summary>
+
+   > asdf
+   > 
+   > 
+
+  </details>
+
 ## Links for reference
 ### Java 8
  * https://mkyong.com/tutorials/java-8-tutorials/
@@ -2246,4 +2375,6 @@ Project to do some Java practices and summarize the new features per Java versio
  * https://www.baeldung.com/java-16-new-features
 
 ### Java 17
+ * https://www.happycoders.eu/java/java-17-features/
  * https://mkyong.com/java/what-is-new-in-java-17/
+ * https://www.baeldung.com/java-17-new-features
