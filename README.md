@@ -2081,63 +2081,104 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Warnings for Value-Based Classes (JEP-390)</summary>
 
-   > asdf
+   > This JEP provides a new warning if we synchronize instances of value-based classes; 
+   > Also deprecating the primitive wrapper class (value-based) constructors for removal.
    > 
+   > The annotation `@jdk.internal.ValueBased` tells if a class is a value-based class, for example:
+   > ```java
+   > package java.util;
+   >
+   > @jdk.internal.ValueBased
+   > public final class Optional<T> {
+   >   //...
+   > }
+   > ```
    > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   >
+   > There is a warning when you compile above example:
+   > ```bash
+   > $ javac -d build src/main/java/co/com/mrsoft/test/java16/Example1.java
+   > src/main/java/co/com/mrsoft/test/java16/Example1.java:10: warning: [synchronization] attempt to 
+   > synchronize on an instance of a value-based class
+   >    synchronized (d) { // Javac warning & HotSpot warning
+   >    ^
+   > 1 warning
+   > ```
 
   </details>   
 
   <details>
    <summary>Packaging Tool (JEP-392)</summary>
 
-   > asdf
+   > The JEP move the `jpackage` tool from `jdk.incubator.jpackage` to `jdk.jpackage`, and became 
+   > a standard or product feature in Java 16. 
+   >
+   > This `jpackage` is a packaging tool to package Java application into a platform-specific package like:
+   >  - Linux: deb and rpm
+   >  - macOS: pkg and dmg
+   >  - Windows: msi and exe
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example2.java)
+   > 
+   > Create a jar file and jpackage it into a platform-specific package
+   > ```bash
+   > # Compile the file
+   > $ javac -d build src/main/java/co/com/mrsoft/test/java16/Example2.java
+   > # Create a jar file
+   > $ jar cvf dist/test.jar -C build .
+   > # package the jar file into platform-specific package
+   > $ jpackage -i dist/ -d dist/ -n test --main-jar test.jar --main-class co.com.mrsoft.test.java16.Example2
+   > ```
 
   </details>   
 
   <details>
    <summary>Foreign-Memory Access API (Third Incubator) (JEP-393)</summary>
 
-   > asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > The Foreign-Memory Access APIs allow Java API to access the foreign memory outside of the Java heap, 
+   > such as memcached, Lucene, etc.
+   >
+   > This JEP updated the Foreign-Memory access APIs and remained as the incubator module.
 
   </details>   
 
   <details>
    <summary>Pattern Matching for instanceof (JEP-394)</summary>
 
-   > asdf
+   > The pattern matching for instanceof is a standard or product feature in Java 16.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java16/Example3.java)
 
   </details>   
 
   <details>
    <summary>Records (JEP-395)</summary>
 
-   > asdf
+   > The record is finalized and becomes a standard feature.
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > [Example](src/main/java/co/com/mrsoft/test/java14/Example3.java)
 
   </details>   
 
   <details>
    <summary>Strongly Encapsulate JDK Internals by Default (JEP-396)</summary>
 
-   > asdf
-   > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > This JEP change the default mode of `--illegal-access` option from permit to deny. 
+   >
+   > With this change, the internal packages and APIs (except the critical internal APIs) of the JDK 
+   > will no longer open by default.
+   >
+   > This JEP’s motivation is to discourage the third-party libraries, frameworks, and tools 
+   > from using the internal APIs and packages of the JDK.
 
   </details>   
 
   <details>
    <summary>Sealed Classes (Second Preview) (JEP-397)</summary>
 
-   > asdf
+   > Java 15 introduced sealed classes and interfaces to restrict which class can extend or implement them. 
    > 
-   > [Example](src/main/java/co/com/mrsoft/test/java16/Example1.java)
+   > This JEP is the second preview with some improvements.
 
   </details>   
 
