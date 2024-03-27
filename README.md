@@ -2278,63 +2278,98 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Remove RMI Activation (JEP-407)</summary>
 
-   > asdf
-   > 
-   > 
+   > Java 15 deprecated the RMI Activation for removal.
+   >
+   > This JEP removed the RMI Activation or `java.rmi.activation` package.
 
   </details>
 
   <details>
    <summary>Sealed Classes (JEP-409)</summary>
 
-   > asdf
+   > Java 15 and Java 16 introduced sealed class as a preview feature.
    > 
+   > This JEP finalized the sealed classes as the standard feature in Java 17, with no changes from Java 16.
    > 
+   > [Example](src/main/java/co/com/mrsoft/test/java15/Example2.java)
 
   </details>
 
   <details>
    <summary>Remove the Experimental AOT and JIT Compiler (JEP-410)</summary>
 
-   > asdf
-   > 
-   > 
+   > Java 9 introduced the Ahead-of-time - AOT compilation (the `jaotc` tool) as an experimental feature. 
+   >
+   > Later Java 10 proposed it again as an experimental JIT compiler.
+   >
+   > However, this feature has little use since they were introduced and required significant effort to maintain it, 
+   > so this JEP removed the experimental Java-based ahead-of-time (AOT) and just-in-time (JIT) compiler
+   >
+   > The following AOT packages, classes, tools and codes are removed:
+   >  - `jdk.aot` — the `jaotc` tool
+   >  - `jdk.internal.vm.compiler` — the Graal compiler
+   >  - `jdk.internal.vm.compiler.management` — Graal’s MBean
+   >  - `src/hotspot/share/aot` — dumps and loads AOT code
+   >  - Additional code guarded by #if INCLUDE_AOT
 
   </details>
 
   <details>
    <summary>Deprecate the Security Manager for Removal (JEP-411)</summary>
 
-   > asdf
+   > Java 1.0 introduced the Security Manager to secure the client-side Java code, and irrelevant now.
    > 
-   > 
+   > This JEP deprecates the Security Manager for removal.
 
   </details>
 
   <details>
    <summary>Foreign Function & Memory API (Incubator) (JEP-412)</summary>
 
-   > asdf
-   > 
-   > 
+   > This Foreign Function & Memory API allows the developer to access the code outside the JVM (foreign functions), 
+   > data stored outside the JVM (off-heap data), and accessing memory not managed by the JVM (foreign memory).
+   >
+   > Related JEPs:
+   >  - Java 14 JEP 370 introduced Foreign-Memory Access API (Incubator).
+   >  - Java 15 JEP 383 introduced Foreign-Memory Access API (Second Incubator).
+   >  - Java 16 JEP 389 introduced Foreign Linker API (Incubator).
+   >  - Java 16 JEP 393 introduced Foreign-Memory Access API (Third Incubator).
 
   </details>
 
   <details>
    <summary>Vector API (Second incubator) (JEP-414)</summary>
 
-   > asdf
-   > 
-   > 
+   > Java 16 introduced new Vector API as an incubating API.
+   >
+   > This JEP improves the Vector API performance and other enhancements like support operations on characters, 
+   > translating byte vectors to and from boolean arrays, etc.
 
   </details>
 
   <details>
    <summary>Context-Specific Deserialization Filters (JEP-415)</summary>
 
-   > asdf
+   > In Java, deserializing untrusted data is dangerous. Java 9 introduced serialization filtering to help 
+   > prevent deserialization vulnerabilities.
    > 
+   > It enabled us to validate incoming serialized data from untrusted sources, a common source of many security issues. 
+   > That validation happens at the JVM level, giving more security and robustness.
    > 
+   > The below example will reject all classes in package `co.com.mrsoft.test.java17.*` and allows only those 
+   > that are part of `java.base`:
+   > ```java
+   > ObjectInputFilter filter1 = ObjectInputFilter.Config.createFilter("!co.com.mrsoft.test.java17.*;java.base/*;!*");  
+   > ```
+   > 
+   > Java 17 added `allowFilter` and `rejectFilter` for `ObjectInputFilter` interface to create deserialization filters faster.
+   > ```java
+   > allowFilter(Predicate<Class<?>>, ObjectInputFilter.Status)
+   > rejectFilter(Predicate<Class<?>>, ObjectInputFilter.Status)
+   > ```
+   > 
+   > This JEP also introduced a concept of filter factory, a `BinaryOperator`, to choose differents deserialization 
+   > filters dynamically or context-specific. The factory determines how to combine the two filters or replace the filter.
 
   </details>
 
