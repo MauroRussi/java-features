@@ -2215,45 +2215,63 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>New macOS Rendering Pipeline (JEP-382)</summary>
 
-   > asdf
-   > 
-   > 
+   > Apple deprecated the OpenGL rendering library in macOS 10.14 release(September 2018), in favor of the 
+   > new Metal framework for better performance.
+   >
+   > This JEP changes the Java 2D (like Swing GUI) internal rendering pipeline for macOS from Apple OpenGL API 
+   > to Apple Metal API; this is an internal change; there are no new Java 2D APIs, nor change any existing APIs.
 
   </details>
 
   <details>
    <summary>macOS/AArch64 Port (JEP-391)</summary>
 
-   > asdf
+   > Apple has a long-term plan to transition its Mac from x64 to AArch64 (e.g., Apple M1 processors).
    > 
-   > 
+   > This JEP port JDK to run on AArch64 platforms on macOS.
 
   </details>
 
   <details>
    <summary>Deprecate the Applet API for Removal (JEP-398)</summary>
 
-   > asdf
+   > The Java Applet API is irrelevant because most of the web-browser has removed support for Java browser plug-ins.
    > 
+   > Java 9 deprecated the Applet API.
    > 
+   > This JEP marked the Applet API for removal.
 
   </details>
 
   <details>
    <summary>Strongly Encapsulate JDK Internals (JEP-403)</summary>
 
-   > asdf
+   > Many third-party libraries, frameworks, and tools are accessing the internal APIs and packages of the JDK. 
    > 
+   > The Java 16, JEP-396 make the strong encapsulation by default (we are not allowed to access the internal APIs easily).
    > 
+   > However, we can still use `--illegal-access` to switch to the simple encapsulation to still access the internal APIs.
+   > 
+   > This JEP is the successor to the above Java 16 JEP-396, and it takes one more step by removing the `--illegal-access` 
+   > option, which means we have no ways to access the internal APIs, except for critical internal APIs such as 
+   > `sun.misc.Unsafe`.
 
   </details>
 
   <details>
    <summary>Pattern Matching for switch (Preview) (JEP-406)</summary>
 
-   > asdf
+   > This JEP adds pattern matching for switch statements and expressions.
    > 
-   > 
+   > Since this is a preview feature, we need to use `--enable-preview` option to enable it.
+   >
+   > There are certain scenarios to consider:
+   >  - if...else chain - We can rewrite tradicional if...else `instanceof` with a `return switch` expression.
+   >    * [Example](src/main/java/co/com/mrsoft/test/java17/Example2.java)
+   >  - Pattern matching and null - Now we can test the null in switch directly.
+   >    * [Example](src/main/java/co/com/mrsoft/test/java17/Example3.java)
+   >  - Refining patterns in switch - Now switch condition allows and expressions called as `guarded patterns`.
+   >    * [Example](src/main/java/co/com/mrsoft/test/java17/Example4.java)
 
   </details>
 
