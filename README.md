@@ -2188,18 +2188,27 @@ Project to do some Java practices and summarize the new features per Java versio
   <details>
    <summary>Restore Always-Strict Floating-Point Semantics (JEP-306)</summary>
 
-   > asdf
+   > This JEP is mainly for scientific applications, and it makes floating-point operations consistently strict. 
+   > The default floating-point operations are `strict` or `strictfp`, both of which guarantee the same results 
+   > from the floating-point calculations on every platform.
    > 
+   > Before Java 1.2, `strictfp` behavior was the default one as well. However, because of hardware issues, the architects 
+   > changed, and the keyword `strictfp` was necessary to re-enable such behavior. 
    > 
+   > Therefore, there is no need to use `strictfp` keyword anymore.
 
   </details>
 
   <details>
    <summary>Enhanced Pseudo-Random Number Generators (JEP-356)</summary>
 
-   > asdf
+   > This JEP introduced a new interface called `RandomGenerator` to make future pseudorandom number generator (PRNG) 
+   > algorithms easier to implement or use.
    > 
+   > Legacy random classes, such as `java.util.Random`, `SplittableRandom` and `SecureRandom` now extend the new 
+   > `RandomGenerator` interface.
    > 
+   > [Example](src/main/java/co/com/mrsoft/test/java17/Example1.java)
 
   </details>
 
